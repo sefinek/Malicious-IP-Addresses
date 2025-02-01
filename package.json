@@ -14,9 +14,9 @@
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
   "main": "actions/update-list.js",
   "scripts": {
+    "remove": "node utils/removeByCriteria.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "up": "ncu -u && npm install && npm update && npm audit fix",
-    "remove": "node utils/removeByCriteria.js"
+    "up": "ncu -u && npm install && npm update && npm audit fix"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -24,7 +24,7 @@
     "ipaddr.js": "^2.2.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.18.0",
+    "@eslint/js": "^9.19.0",
     "globals": "^15.14.0"
   }
 }
