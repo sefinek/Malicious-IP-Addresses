@@ -64,12 +64,12 @@ const removeByCriteria = async (criteria, criteriaType) => {
 };
 
 (async () => {
-	// Remove by endpoint
-	// await removeByCriteria('', 'endpoint');
+	// Remove by user-agent
+	// await removeByCriteria('', 'userAgent');
 
 	// Remove by IP
 	await removeByCriteria('', 'ip');
 
-	// Remove by user-agent
-	// await removeByCriteria('', 'userAgent');
+	// Remove by endpoint
+	// await removeByCriteria('', 'endpoint');
 })();
