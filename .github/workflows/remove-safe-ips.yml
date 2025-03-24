@@ -1,0 +1,51 @@
+name: Remove safe IPs
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          ref: main
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --omit=dev
+
+      - name: Remove safe IPs
+        run: node actions/remove-safe-ips
+
+      - name: Run git pull
+        run: git pull
+
+      - name: Add files to staging
+        run: git add .
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "Sefinek Actions"
+          git config user.email "sefinek.actions@gmail.com"
+          if [ -n "$(git status -s)" ]; then
+            MODIFIED_FILES=$(git diff --name-only HEAD)
+            FILE_COUNT=$(echo "$MODIFIED_FILES" | wc -l)
+            if [ "$FILE_COUNT" -gt 0 ]; then
+              git commit -am "Update the list of malicious IP addresses [$FILE_COUNT files]" -m "$MODIFIED_FILES"
+              git push origin main
+            else
+              echo "Canceled. No changes were made."
+            fi
+          else
+            echo "Canceled. No changes to commit."
+          fi
