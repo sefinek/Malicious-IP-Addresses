@@ -29,9 +29,6 @@ jobs:
         env:
           MALICIOUS_IPS_LIST_SECRET: ${{ secrets.MALICIOUS_IPS_LIST_SECRET }}
 
-      - name: Remove safe IPs
-        run: node actions/remove-safe-ips
-
       - name: Run git pull
         run: git pull
 
