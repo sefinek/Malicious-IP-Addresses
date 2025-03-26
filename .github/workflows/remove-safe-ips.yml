@@ -25,7 +25,7 @@ jobs:
         run: npm ci --omit=dev
 
       - name: Remove safe IP addresses
-        run: node actions/remove-safe-ips
+        run: node scripts/remove-safe-ips
 
       - name: Pull latest changes
         run: git pull

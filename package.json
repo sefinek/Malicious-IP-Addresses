@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
-  "main": "actions/update-list.js",
+  "main": "scripts/update-list.js",
   "scripts": {
     "remove": "node scripts/utils/removeByCriteria.js",
     "test": "echo \"Error: no test specified\" && exit 1",
