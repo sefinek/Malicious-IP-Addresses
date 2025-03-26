@@ -1,4 +1,4 @@
-const axios = require('./services/axios.js');
+const axios = require('../services/axios.js');
 const fs = require('node:fs');
 const path = require('node:path');
 

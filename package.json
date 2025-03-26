@@ -1,6 +1,6 @@
 {
   "name": "malicious-ip-addresses",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This repository contains a list of various IP addresses associated with different malicious activities on the network. Most of them are part of botnets used to carry out cyberattacks, such as DDoS (Distributed Denial of Service) attacks.",
   "homepage": "https://github.com/sefinek/Malicious-IP-Addresses#readme",
   "bugs": {
@@ -14,7 +14,7 @@
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
   "main": "actions/update-list.js",
   "scripts": {
-    "remove": "node utils/removeByCriteria.js",
+    "remove": "node scripts/utils/removeByCriteria.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "up": "ncu -u && npm install && npm update && npm audit fix"
   },

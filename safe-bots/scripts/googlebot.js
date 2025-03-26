@@ -1,4 +1,4 @@
-const processUrls = require('../../utils/processUrls.js');
+const processUrls = require('../../scripts/utils/processUrls.js');
 const path = require('node:path');
 
 const URLS = [

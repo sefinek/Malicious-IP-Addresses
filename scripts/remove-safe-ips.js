@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const ipaddr = require('ipaddr.js');
-const axios = require('../utils/services/axios.js');
+const axios = require('./services/axios.js');
 
 const WHITELISTS = [
 	'https://raw.githubusercontent.com/AnTheMaker/GoodBots/main/all.ips',
