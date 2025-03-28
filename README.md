@@ -26,5 +26,5 @@ This file contains user agents, endpoints, and IP addresses that have been black
 Not all IP addresses from [main.txt](lists/main.txt) are included in [details.csv](lists/details.csv).
 
 ## Other Repositories
-1. [sefinek/Cloudflare-WAF-Expressions](https://github.com/sefinek/Cloudflare-WAF-Expressions)
+1. [sefinek/Cloudflare-WAF-Rules](https://github.com/sefinek/Cloudflare-WAF-Rules)
 2. [sefinek/Cloudflare-WAF-To-AbuseIPDB](https://github.com/sefinek/Cloudflare-WAF-To-AbuseIPDB)
