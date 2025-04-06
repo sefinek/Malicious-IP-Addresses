@@ -14,7 +14,7 @@
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
   "main": "scripts/update-list.js",
   "scripts": {
-    "remove": "node scripts/utils/removeByCriteria.js",
+    "remove": "node removeByCriteria.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "up": "ncu -u && npm install && npm update && npm audit fix"
   },

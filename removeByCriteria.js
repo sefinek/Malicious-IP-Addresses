@@ -2,8 +2,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { parse } = require('csv-parse');
 
-const txtFilePath = path.join(__dirname, '../lists/main.txt');
-const csvFilePath = path.join(__dirname, '../lists/details.csv');
+const txtFilePath = path.join(__dirname, './lists/main.txt');
+const csvFilePath = path.join(__dirname, './lists/details.csv');
 const criteriaMapping = { endpoint: 4, ip: 3, userAgent: 5 };
 
 const removeFromTxt = (filePath, patterns) => {
@@ -68,7 +68,7 @@ const removeByCriteria = async (criteria, criteriaType) => {
 	// await removeByCriteria('', 'userAgent');
 
 	// Remove by IP
-	await removeByCriteria('', 'ip');
+	await removeByCriteria('70.50.0.92', 'ip');
 
 	// Remove by endpoint
 	// await removeByCriteria('', 'endpoint');
