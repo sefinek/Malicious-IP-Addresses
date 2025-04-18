@@ -3,8 +3,8 @@ const path = require('node:path');
 const { parse } = require('csv-parse/sync');
 const axios = require('./services/axios.js');
 
-const listFilePath = path.join(__dirname, '..', 'lists', 'main.txt');
-const logsFilePath = path.join(__dirname, '..', 'lists', 'details.csv');
+const TXT_FILE_PATH = path.join(__dirname, '..', 'lists', 'main.txt');
+const CSV_FILE_PATH = path.join(__dirname, '..', 'lists', 'details.csv');
 
 const loadUniqueIPsFromFile = async filePath => {
 	const content = fs.existsSync(filePath) ? await fs.promises.readFile(filePath, 'utf8') : '';
@@ -32,24 +32,24 @@ const appendToFile = async (filePath, content) => {
 
 	try {
 		const res = await axios.get('https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb', {
-			headers: { 'Authorization': apiKey },
+			headers: { 'X-API-Key': apiKey },
 		});
 
 		const data = res.data?.logs || [];
 		let newCsvEntries = 0, newIPsAdded = 0, skippedEntries = 0, totalLogsProcessed = 0;
 
-		const existingIPs = await loadUniqueIPsFromFile(listFilePath);
-		const existingRayIds = await loadCsvRayIds(logsFilePath);
+		const existingIPs = await loadUniqueIPsFromFile(TXT_FILE_PATH);
+		const existingRayIds = await loadCsvRayIds(CSV_FILE_PATH);
 
 		if (data.length > 0) {
-			if (!fs.existsSync(logsFilePath)) await fs.promises.writeFile(logsFilePath, 'Added,Date,RayID,IP,Endpoint,User-Agent,"Action taken",Country\n');
+			if (!fs.existsSync(CSV_FILE_PATH)) await fs.promises.writeFile(CSV_FILE_PATH, 'Added,Date,RayID,IP,Endpoint,User-Agent,"Action taken",Country\n');
 
 			for (const entry of data) {
 				const { rayId, ip, endpoint, userAgent, action, country, timestamp } = entry;
 				totalLogsProcessed++;
 
 				if (!existingIPs.has(ip)) {
-					await appendToFile(listFilePath, ip);
+					await appendToFile(TXT_FILE_PATH, ip);
 					existingIPs.add(ip);
 					newIPsAdded++;
 				}
@@ -66,7 +66,7 @@ const appendToFile = async (filePath, content) => {
 						country,
 					].join(',');
 
-					await fs.promises.appendFile(logsFilePath, `\n${logEntry}`);
+					await fs.promises.appendFile(TXT_FILE_PATH, `\n${logEntry}`);
 					existingRayIds.add(rayId);
 					newCsvEntries++;
 				} else {
