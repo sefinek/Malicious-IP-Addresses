@@ -90,6 +90,11 @@ const removeIPsFromFile = (filePath, whitelistedIPs) => {
 };
 
 (async () => {
+	const filesToProcess = [
+		path.join(__dirname, '..', 'lists', 'details.csv'),
+		path.join(__dirname, '..', 'lists', 'main.txt'),
+	];
+
 	try {
 		console.log('Starting IP processing...');
 		const whitelistedIPs = await fetchAllWhitelists();
@@ -98,10 +103,6 @@ const removeIPsFromFile = (filePath, whitelistedIPs) => {
 			return;
 		}
 
-		const filesToProcess = [
-			path.join(__dirname, '..', 'lists', 'details.csv'),
-			path.join(__dirname, '..', 'lists', 'main.txt'),
-		];
 		for (const filePath of filesToProcess) {
 			removeIPsFromFile(filePath, whitelistedIPs);
 		}
