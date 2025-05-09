@@ -2,8 +2,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { parse } = require('csv-parse');
 
-const txtFilePath = path.join(__dirname, './lists/main.txt');
-const csvFilePath = path.join(__dirname, './lists/details.csv');
+const TXT_FILE_PATH = path.join(__dirname, 'lists', 'main.txt');
+const CSV_FILE_PATH = path.join(__dirname, 'lists', 'details.csv');
 const criteriaMapping = { endpoint: 4, ip: 3, userAgent: 5 };
 
 const removeFromTxt = (filePath, patterns) => {
@@ -21,7 +21,7 @@ const removeFromTxt = (filePath, patterns) => {
 
 const parseCSV = async () => {
 	const csvData = [];
-	const parser = fs.createReadStream(csvFilePath).pipe(parse({ delimiter: ',' }));
+	const parser = fs.createReadStream(CSV_FILE_PATH).pipe(parse({ delimiter: ',' }));
 
 	for await (const record of parser) {
 		csvData.push(
@@ -43,7 +43,7 @@ const removeFromCSV = (data, lines) =>
 
 const removeByCriteria = async (criteria, criteriaType) => {
 	if (!criteria || !criteriaType) return console.error('Criteria and criteriaType are required parameters.');
-	if (!fs.existsSync(csvFilePath)) return console.error('CSV file not found:', csvFilePath);
+	if (!fs.existsSync(CSV_FILE_PATH)) return console.error('CSV file not found:', CSV_FILE_PATH);
 
 	try {
 		const csvData = await parseCSV();
@@ -51,9 +51,9 @@ const removeByCriteria = async (criteria, criteriaType) => {
 		const matchingLines = filterByCriteria(csvData, criteria, criteriaMapping[criteriaType]);
 		const ipsToRemove = [...new Set(matchingLines.map(line => line[3]))];
 		if (ipsToRemove.length) {
-			const txtRemovedCount = removeFromTxt(txtFilePath, ipsToRemove);
+			const txtRemovedCount = removeFromTxt(TXT_FILE_PATH, ipsToRemove);
 			const updatedCsvData = removeFromCSV(csvData, matchingLines);
-			fs.writeFileSync(csvFilePath, updatedCsvData.map(line => line.join(',')).join('\n'));
+			fs.writeFileSync(CSV_FILE_PATH, updatedCsvData.map(line => line.join(',')).join('\n'));
 			console.log(`-${txtRemovedCount} lines from main.txt | -${matchingLines.length} lines from details.csv`);
 		} else {
 			console.warn(`No matching ${criteriaType.toUpperCase()} found in CSV for: ${criteria}`);
@@ -68,7 +68,7 @@ const removeByCriteria = async (criteria, criteriaType) => {
 	// await removeByCriteria('', 'userAgent');
 
 	// Remove by IP
-	await removeByCriteria('', 'ip');
+	await removeByCriteria('123', 'ip');
 
 	// Remove by endpoint
 	// await removeByCriteria('', 'endpoint');

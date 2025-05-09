@@ -1,6 +1,6 @@
-const axios = require('../services/axios.js');
 const fs = require('node:fs');
 const path = require('node:path');
+const axios = require('../services/axios.js');
 
 module.exports = async (urls, filePath) => {
 	try {
