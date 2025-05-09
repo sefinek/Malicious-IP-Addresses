@@ -1,9 +1,9 @@
 # 📃 Malicious IP Address List
 This repository contains a list of IP addresses associated with various malicious activities on the internet.
-Many of these addresses are part of botnets, VPN/Proxy networks used to carry out cyberattacks, such as DDoS attacks, and more.
+Many of them are part of botnets or VPN/proxy networks used to conduct cyberattacks — including DDoS and more.
 
 ⭐ **If you find this repository helpful, please consider giving it a star. Thank you!**  
-📄 **Looking for solid and effective Cloudflare WAF Expressions? Check out [sefinek/Cloudflare-WAF-Expressions](https://github.com/sefinek/Cloudflare-WAF-Expressions)**
+📄 **Looking for solid and effective Cloudflare WAF expressions? Check out [sefinek/Cloudflare-WAF-Expressions](https://github.com/sefinek/Cloudflare-WAF-Expressions)**
 
 ## What Can This List Block?
 1. ✅ DDoS attacks (L7 – HTTP flood)
@@ -19,7 +19,7 @@ Many of these addresses are part of botnets, VPN/Proxy networks used to carry ou
 > Blocking IP addresses should be done carefully to avoid disrupting legitimate traffic. Regularly updating the list is highly recommended.
 
 ## Cron
-The list is usually updated every 2 hours.
+Updates usually occur every 2 hours, but occasionally there may be a delay of several days. The list is actively maintained and will not be abandoned.
 
 ## TXT
 ```text
