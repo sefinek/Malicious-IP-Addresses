@@ -24,7 +24,7 @@ Many of them are part of botnets or VPN/proxy networks used to conduct cyberatta
 Updates usually occur every 2 hours, but occasionally there may be a delay of several days. The list is actively maintained and will not be abandoned.
 
 
-## Files
+## Available Files
 ### TXT (recommended)
 ```text
 https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
