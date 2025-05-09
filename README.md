@@ -2,16 +2,21 @@
 This repository contains a list of IP addresses associated with various malicious activities on the internet.
 Many of these addresses are part of botnets, VPN/Proxy networks used to carry out cyberattacks, such as DDoS attacks, and more.
 
-⭐ **If you find this repository helpful, please consider giving it a star. Thank you!**
+⭐ **If you find this repository helpful, please consider giving it a star. Thank you!**  
+📄 **Looking for solid and effective Cloudflare WAF Expressions? Check out [sefinek/Cloudflare-WAF-Expressions](https://github.com/sefinek/Cloudflare-WAF-Expressions)**
 
 ## What Can This List Block?
-1. ✅ DDoS attacks
+1. ✅ DDoS attacks (L7 – HTTP flood)
+    - HTTP requests from known botnets
+    - Requests with unusual HTTP headers or URI paths
+    - Traffic from known bad sources
+    - Requests impersonating real browsers
 2. ✅ Malicious bots & crawlers
 3. ✅ Bots generating artificial views (useful if you use Google AdSense)
 4. ✅ Malicious VPNs & proxies
 
-Blocking IP addresses should be done cautiously to avoid disrupting legitimate traffic.
-It is recommended to update the list regularly.
+> [!IMPORTANT]  
+> Blocking IP addresses should be done carefully to avoid disrupting legitimate traffic. Regularly updating the list is highly recommended.
 
 ## Cron
 The list is usually updated every 2 hours.
