@@ -25,7 +25,7 @@ Updates usually occur every 2 hours, but occasionally there may be a delay of se
 
 
 ## Available Files
-### » TXT (recommended)
+### ✅ TXT (recommended)
 ```text
 https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
 ```
@@ -35,9 +35,9 @@ https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main
 curl -L --progress-bar -o main.txt https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
 ```
 
-### » CSV
+### 📊 CSV
 ```text
-https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.csv
+https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
 ```
 
 > [!IMPORTANT]  
