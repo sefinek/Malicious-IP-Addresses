@@ -27,6 +27,9 @@ jobs:
       - name: Remove safe IP addresses
         run: node scripts/remove-safe-ips
 
+      - name: Cleanup
+        run: node scripts/cleanup.js
+
       - name: Pull latest changes
         run: git pull
 

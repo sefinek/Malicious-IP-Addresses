@@ -80,7 +80,7 @@ const appendToFile = async (filePath, content) => {
 		console.log(`New entries added to CSV: ${newCsvEntries}`);
 		console.log(`Skipped entries: ${skippedEntries}`);
 	} catch (err) {
-		console.error(err);
+		console.error(err.stack);
 		process.exit(1);
 	}
 })();

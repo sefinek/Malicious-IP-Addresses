@@ -29,6 +29,9 @@ jobs:
         env:
           MALICIOUS_IPS_LIST_SECRET: ${{ secrets.MALICIOUS_IPS_LIST_SECRET }}
 
+      - name: Cleanup
+        run: node scripts/cleanup.js
+
       - name: Pull latest changes
         run: git pull
 
