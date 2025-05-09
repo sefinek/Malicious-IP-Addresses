@@ -53,3 +53,7 @@ curl -L --progress-bar -o details.csv https://raw.githubusercontent.com/sefinek/
 ## Other Repositories
 1. [sefinek/Cloudflare-WAF-Rules](https://github.com/sefinek/Cloudflare-WAF-Rules)
 2. [sefinek/Cloudflare-WAF-To-AbuseIPDB](https://github.com/sefinek/Cloudflare-WAF-To-AbuseIPDB)
+
+
+## MIT License
+Copyright 2024-2025 © by [Sefinek](https://sefinek.net). All Rights Reserved.
