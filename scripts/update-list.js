@@ -5,13 +5,14 @@ const { parse } = require('csv-parse/sync');
 const { stringify } = require('csv-stringify/sync');
 const axios = require('./services/axios.js');
 
-const TXT_FILE_PATH = path.join(__dirname, '..', 'lists', 'main.txt');
-const CSV_FILE_PATH = path.join(__dirname, '..', 'lists', 'details.csv');
+const listsDir = path.join(__dirname, '..', 'lists');
+const TXT_FILE_PATH = path.join(listsDir, 'main.txt');
+const CSV_FILE_PATH = path.join(listsDir, 'details.csv');
 
 const readLinesAsSet = async filePath => {
 	try {
 		const content = await fs.readFile(filePath, 'utf8');
-		return new Set(content.split('\n').map(l => l.trim()).filter(Boolean));
+		return new Set(content.split(/\r?\n/).map(line => line.trim()).filter(Boolean));
 	} catch (err) {
 		if (err.code === 'ENOENT') return new Set();
 		throw err;
@@ -22,7 +23,7 @@ const readCsvRayIds = async filePath => {
 	try {
 		const content = await fs.readFile(filePath, 'utf8');
 		const records = parse(content, { columns: true, skip_empty_lines: true });
-		return new Set(records.map(r => r.RayID.trim()));
+		return new Set(records.map(record => record.RayID.trim()));
 	} catch (err) {
 		if (err.code === 'ENOENT') return new Set();
 		throw err;
@@ -34,7 +35,8 @@ const appendLineToFile = async (filePath, line) => {
 };
 
 const appendCsvRows = async (filePath, rows) => {
-	const csv = stringify(rows, { header: !fsSync.existsSync(filePath) });
+	const header = !fsSync.existsSync(filePath);
+	const csv = stringify(rows, { header });
 	await fs.appendFile(filePath, csv, 'utf8');
 };
 
@@ -43,19 +45,16 @@ const appendCsvRows = async (filePath, rows) => {
 	if (!apiKey) throw new Error('MALICIOUS_IPS_LIST_SECRET environment variable not set');
 
 	try {
-		const { data: { logs = [] } = {} } = await axios.get(
-			'https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb',
-			{ headers: { 'X-API-Key': apiKey } }
-		);
+		await fs.mkdir(listsDir, { recursive: true });
 
+		const response = await axios.get('https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb', { headers: { 'X-API-Key': apiKey } });
+		const logs = response.data?.logs ?? [];
 		const existingIPs = await readLinesAsSet(TXT_FILE_PATH);
 		const existingRayIds = await readCsvRayIds(CSV_FILE_PATH);
 		const newCsvRows = [];
 
 		let newCsv = 0, newIPs = 0, skipped = 0, total = 0;
-
-		for (const log of logs) {
-			const { rayId, ip, endpoint, userAgent, action, country, timestamp } = log;
+		for (const { rayId, ip, endpoint, userAgent, action, country, timestamp } of logs) {
 			total++;
 
 			if (!existingIPs.has(ip)) {

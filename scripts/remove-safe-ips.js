@@ -1,112 +1,97 @@
-const fs = require('node:fs');
+const fs = require('node:fs/promises');
 const path = require('node:path');
+const { parse } = require('csv-parse/sync');
+const { stringify } = require('csv-stringify/sync');
 const ipaddr = require('ipaddr.js');
 const axios = require('./services/axios.js');
 
-const WHITELISTS = [
-	'https://raw.githubusercontent.com/AnTheMaker/GoodBots/main/all.ips',
-];
+const listsDir = path.join(__dirname, '..', 'lists');
+const TXT_FILE = path.join(listsDir, 'main.txt');
+const CSV_FILE = path.join(listsDir, 'details.csv');
+const WHITELISTS = ['https://raw.githubusercontent.com/AnTheMaker/GoodBots/main/all.ips'];
 
 const fetchAllWhitelists = async () => {
 	try {
-		const allIPs = await Promise.all(WHITELISTS.map(async url => {
-			console.log(`Fetching whitelist from: ${url}`);
-			const response = await axios.get(url);
-			if (response.status !== 200) throw new Error(`Request Failed. Status Code: ${response.status}`);
-
-			return response.data.split('\n').filter(ip => ip.trim() !== '' && !ip.startsWith('#'));
-		}));
-
-		const uniqueIPs = [...new Set(allIPs.flat())];
-		console.log(`Total unique IPs fetched: ${uniqueIPs.length}`);
-		return uniqueIPs;
+		const results = await Promise.all(
+			WHITELISTS.map(url => axios.get(url).then(r => {
+				if (r.status !== 200) throw new Error(`Status Code: ${r.status}`);
+				return r.data.split(/\r?\n/).map(l => l.trim()).filter(l => l && !l.startsWith('#'));
+			}))
+		);
+		const all = [...new Set(results.flat())];
+		console.log(`Fetched ${all.length} unique whitelist entries`);
+		return all;
 	} catch (err) {
-		console.error(`Failed to fetch whitelists: ${err.stack}`);
+		console.error(err);
 		return [];
 	}
 };
 
-const isWhitelisted = (ip, whitelistedIPsSet) => {
+const isWhitelisted = (ip, set) => {
 	try {
-		const parsedIP = ipaddr.parse(ip);
-		if (whitelistedIPsSet.has(ip)) {
-			console.log(`IP ${ip} is directly whitelisted.`);
-			return true;
-		}
-
-		for (const whitelistedIP of whitelistedIPsSet) {
-			if (whitelistedIP.includes('/')) {
-				const range = ipaddr.parseCIDR(whitelistedIP);
-				if (parsedIP.kind() === range[0].kind() && parsedIP.match(range)) {
-					console.log(`IP ${ip} matches CIDR range ${whitelistedIP}`);
-					return true;
-				}
+		const parsed = ipaddr.parse(ip);
+		if (set.has(ip)) return true;
+		for (const w of set) {
+			if (w.includes('/')) {
+				const [network, prefix] = ipaddr.parseCIDR(w);
+				if (parsed.kind() === network.kind() && parsed.match([network, prefix])) return true;
 			}
 		}
-	} catch (err) {
-		console.warn(`Error checking if IP ${ip} is whitelisted: ${err.message}`);
+	} catch {
 		return false;
 	}
 	return false;
 };
 
-const removeIPsFromFile = (filePath, whitelistedIPs) => {
-	console.log(`Processing file: ${filePath}`);
-	const whitelistedIPsSet = new Set(whitelistedIPs);
-	const content = fs.readFileSync(filePath, 'utf8');
-	const lines = content.split('\n').filter(line => line.trim() !== '');
-	const ext = path.extname(filePath);
-	let filteredLines = [];
-	const initialCount = lines.length;
-
-	if (ext === '.txt') {
-		filteredLines = lines.filter(line => {
-			const ip = line.trim();
-			const isWhite = isWhitelisted(ip, whitelistedIPsSet);
-			if (isWhite) console.log(`Removing whitelisted IP (${ip})...`);
-			return !isWhite;
-		});
-	} else if (ext === '.csv') {
-		const [header, ...rest] = lines;
-		filteredLines = [header, ...rest.filter(line => {
-			const fields = line.split(',');
-			if (fields.length > 3) {
-				const ip = fields[3].trim();
-				const isWhite = isWhitelisted(ip, whitelistedIPsSet);
-				if (isWhite) console.log(`Removing whitelisted IP (${ip}) from CSV...`);
-				return !isWhite;
-			}
-			return true;
-		})];
+const readLines = async file => {
+	try {
+		const content = await fs.readFile(file, 'utf8');
+		return content.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+	} catch (e) {
+		if (e.code === 'ENOENT') return [];
+		throw e;
 	}
+};
 
-	const filteredCount = filteredLines.length;
-	if (filteredLines.length > 0 && filteredLines[filteredLines.length - 1] === '') {
-		filteredLines.pop();
+const readCsv = async file => {
+	try {
+		const content = await fs.readFile(file, 'utf8');
+		return parse(content, { columns: true, skip_empty_lines: true });
+	} catch (e) {
+		if (e.code === 'ENOENT') return [];
+		throw e;
 	}
+};
 
-	fs.writeFileSync(filePath, filteredLines.join('\n').trim(), 'utf8');
-	console.log(`${filePath}: Initial entries: ${initialCount}; Removed: ${initialCount - filteredCount}; Remaining: ${filteredCount}`);
+const writeLines = async (file, lines) => {
+	await fs.writeFile(file, lines.join('\n'), 'utf8');
+};
+
+const writeCsv = async (file, rows) => {
+	const output = rows.length ? stringify(rows, { header: true }) : '';
+	await fs.writeFile(file, output, 'utf8');
 };
 
 (async () => {
-	const filesToProcess = [
-		path.join(__dirname, '..', 'lists', 'details.csv'),
-		path.join(__dirname, '..', 'lists', 'main.txt'),
-	];
-
 	try {
-		console.log('Starting IP processing...');
-		const whitelistedIPs = await fetchAllWhitelists();
-		if (whitelistedIPs.length === 0) {
-			console.log('No whitelisted IPs found, skipping processing.');
-			return;
-		}
+		await fs.mkdir(listsDir, { recursive: true });
+		console.log('Starting processing...');
 
-		for (const filePath of filesToProcess) {
-			removeIPsFromFile(filePath, whitelistedIPs);
-		}
+		const whitelist = await fetchAllWhitelists();
+		if (!whitelist.length) return console.log('No whitelisted IPs found, skipping processing.');
+
+		const set = new Set(whitelist);
+		const txtLines = await readLines(TXT_FILE);
+		const filteredTxt = txtLines.filter(ip => !isWhitelisted(ip, set));
+		await writeLines(TXT_FILE, filteredTxt);
+		console.log(`main.txt: removed ${txtLines.length - filteredTxt.length}`);
+
+		const csvRows = await readCsv(CSV_FILE);
+		const filteredCsv = csvRows.filter(r => r.IP && !isWhitelisted(r.IP.trim(), set));
+		await writeCsv(CSV_FILE, filteredCsv);
+		console.log(`details.csv: removed ${csvRows.length - filteredCsv.length}`);
 	} catch (err) {
-		console.error('Error during processing:', err);
+		console.error(err);
+		process.exit(1);
 	}
 })();
