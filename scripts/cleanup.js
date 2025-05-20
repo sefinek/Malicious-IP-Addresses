@@ -22,23 +22,19 @@ const classifyIp = ip => {
 	return NON_PUBLIC_RANGES.has(range) ? 'nonPublic' : 'public';
 };
 
-const logStats = (type, counts) => {
+const logStats = (fileName, counts) => {
 	const total = counts.public + counts.nonPublic + counts.invalid;
 	const removed = counts.nonPublic + counts.invalid;
-	const hasDuplicates = 'duplicates' in counts;
-
 	const percent = n => {
 		if (n === 0) return '0.000%';
 		const p = (n / total) * 100;
 		return p < 0.001 ? '<0.001%' : `${p.toFixed(3)}%`;
 	};
 
-	console.log(`📄 ${type}`);
+	console.log(`📄 ${fileName}`);
 	console.log(`  • total entries        : ${total}`);
 	console.log(`  • valid public         : ${counts.public}`);
-	if (hasDuplicates) {
-		console.log(`  • duplicate public IPs : ${counts.duplicates}`);
-	}
+	if ('duplicates' in counts) console.log(`  • duplicate public IPs : ${counts.duplicates}`);
 	console.log(`  • removed non-public   : ${counts.nonPublic} (${percent(counts.nonPublic)})`);
 	console.log(`  • removed invalid      : ${counts.invalid} (${percent(counts.invalid)})`);
 	console.log(`  • total removed        : ${removed} (${percent(removed)})`);
@@ -55,17 +51,20 @@ const cleanTextFile = async filePath => {
 
 		for (const ip of lines) {
 			const type = classifyIp(ip);
-			counts[type]++;
 			if (type === 'public') {
-				if (!seen.has(ip)) {
+				if (seen.has(ip)) {
+					counts.duplicates++;
+				} else {
 					seen.add(ip);
 					cleaned.push(ip);
-				} else {
-					counts.duplicates++;
+					counts.public++;
 				}
+			} else if (type === 'nonPublic') {
+				counts.nonPublic++;
+			} else {
+				counts.invalid++;
 			}
 		}
-
 		await fs.writeFile(filePath, cleaned.join('\n'), 'utf8');
 		logStats(path.basename(filePath), counts);
 	} catch (err) {
@@ -82,11 +81,18 @@ const cleanCsvFile = async filePath => {
 
 		const cleaned = records.filter(row => {
 			const type = classifyIp(row.IP);
-			counts[type]++;
-			return type === 'public';
+			if (type === 'public') {
+				counts.public++;
+				return true;
+			} else if (type === 'nonPublic') {
+				counts.nonPublic++;
+			} else {
+				counts.invalid++;
+			}
+			return false;
 		});
 
-		if (cleaned.length > 0) {
+		if (cleaned.length) {
 			const output = stringify(cleaned, { header: true, columns: Object.keys(cleaned[0]) });
 			await fs.writeFile(filePath, output, 'utf8');
 		} else {

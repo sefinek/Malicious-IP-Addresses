@@ -5,9 +5,11 @@ const { parse } = require('csv-parse/sync');
 const { stringify } = require('csv-stringify/sync');
 const axios = require('./services/axios.js');
 
-const listsDir = path.join(__dirname, '..', 'lists');
-const TXT_FILE_PATH = path.join(listsDir, 'main.txt');
-const CSV_FILE_PATH = path.join(listsDir, 'details.csv');
+const LISTS_DIR = path.join(__dirname, '..', 'lists');
+const FILES = {
+	txt: path.join(LISTS_DIR, 'main.txt'),
+	csv: path.join(LISTS_DIR, 'details.csv'),
+};
 
 const readLinesAsSet = async filePath => {
 	try {
@@ -45,12 +47,12 @@ const appendCsvRows = async (filePath, rows) => {
 	if (!apiKey) throw new Error('MALICIOUS_IPS_LIST_SECRET environment variable not set');
 
 	try {
-		await fs.mkdir(listsDir, { recursive: true });
+		await fs.mkdir(LISTS_DIR, { recursive: true });
 
 		const response = await axios.get('https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb', { headers: { 'X-API-Key': apiKey } });
 		const logs = response.data?.logs ?? [];
-		const existingIPs = await readLinesAsSet(TXT_FILE_PATH);
-		const existingRayIds = await readCsvRayIds(CSV_FILE_PATH);
+		const existingIPs = await readLinesAsSet(FILES.txt);
+		const existingRayIds = await readCsvRayIds(FILES.csv);
 		const newCsvRows = [];
 
 		let newCsv = 0, newIPs = 0, skipped = 0, total = 0;
@@ -58,7 +60,7 @@ const appendCsvRows = async (filePath, rows) => {
 			total++;
 
 			if (!existingIPs.has(ip)) {
-				await appendLineToFile(TXT_FILE_PATH, ip);
+				await appendLineToFile(FILES.txt, ip);
 				existingIPs.add(ip);
 				newIPs++;
 			}
@@ -82,7 +84,7 @@ const appendCsvRows = async (filePath, rows) => {
 		}
 
 		if (newCsvRows.length > 0) {
-			await appendCsvRows(CSV_FILE_PATH, newCsvRows);
+			await appendCsvRows(FILES.csv, newCsvRows);
 		}
 
 		console.log(`Total logs processed:     ${total}`);

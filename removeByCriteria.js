@@ -2,8 +2,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { parse } = require('csv-parse');
 
-const TXT_FILE_PATH = path.join(__dirname, 'lists', 'main.txt');
-const CSV_FILE_PATH = path.join(__dirname, 'lists', 'details.csv');
+const LISTS_DIR = path.join(__dirname, '..', 'lists');
+const FILES = {
+	txt: path.join(LISTS_DIR, 'main.txt'),
+	csv: path.join(LISTS_DIR, 'details.csv'),
+};
 const criteriaMapping = { endpoint: 4, ip: 3, userAgent: 5 };
 
 const removeFromTxt = (filePath, patterns) => {
@@ -21,7 +24,7 @@ const removeFromTxt = (filePath, patterns) => {
 
 const parseCSV = async () => {
 	const csvData = [];
-	const parser = fs.createReadStream(CSV_FILE_PATH).pipe(parse({ delimiter: ',' }));
+	const parser = fs.createReadStream(FILES.csv).pipe(parse({ delimiter: ',' }));
 
 	for await (const record of parser) {
 		csvData.push(
@@ -43,7 +46,7 @@ const removeFromCSV = (data, lines) =>
 
 const removeByCriteria = async (criteria, criteriaType) => {
 	if (!criteria || !criteriaType) return console.error('Criteria and criteriaType are required parameters.');
-	if (!fs.existsSync(CSV_FILE_PATH)) return console.error('CSV file not found:', CSV_FILE_PATH);
+	if (!fs.existsSync(FILES.csv)) return console.error('CSV file not found:', FILES.csv);
 
 	try {
 		const csvData = await parseCSV();
@@ -51,9 +54,9 @@ const removeByCriteria = async (criteria, criteriaType) => {
 		const matchingLines = filterByCriteria(csvData, criteria, criteriaMapping[criteriaType]);
 		const ipsToRemove = [...new Set(matchingLines.map(line => line[3]))];
 		if (ipsToRemove.length) {
-			const txtRemovedCount = removeFromTxt(TXT_FILE_PATH, ipsToRemove);
+			const txtRemovedCount = removeFromTxt(FILES.txt, ipsToRemove);
 			const updatedCsvData = removeFromCSV(csvData, matchingLines);
-			fs.writeFileSync(CSV_FILE_PATH, updatedCsvData.map(line => line.join(',')).join('\n'));
+			fs.writeFileSync(FILES.csv, updatedCsvData.map(line => line.join(',')).join('\n'));
 			console.log(`-${txtRemovedCount} lines from main.txt | -${matchingLines.length} lines from details.csv`);
 		} else {
 			console.warn(`No matching ${criteriaType.toUpperCase()} found in CSV for: ${criteria}`);

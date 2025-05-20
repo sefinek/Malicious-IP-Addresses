@@ -5,9 +5,11 @@ const { stringify } = require('csv-stringify/sync');
 const ipaddr = require('ipaddr.js');
 const axios = require('./services/axios.js');
 
-const listsDir = path.join(__dirname, '..', 'lists');
-const TXT_FILE = path.join(listsDir, 'main.txt');
-const CSV_FILE = path.join(listsDir, 'details.csv');
+const LISTS_DIR = path.join(__dirname, '..', 'lists');
+const FILES = {
+	txt: path.join(LISTS_DIR, 'main.txt'),
+	csv: path.join(LISTS_DIR, 'details.csv'),
+};
 const WHITELISTS = ['https://raw.githubusercontent.com/AnTheMaker/GoodBots/main/all.ips'];
 
 const fetchAllWhitelists = async () => {
@@ -74,21 +76,21 @@ const writeCsv = async (file, rows) => {
 
 (async () => {
 	try {
-		await fs.mkdir(listsDir, { recursive: true });
+		await fs.mkdir(LISTS_DIR, { recursive: true });
 		console.log('Starting processing...');
 
 		const whitelist = await fetchAllWhitelists();
 		if (!whitelist.length) return console.log('No whitelisted IPs found, skipping processing.');
 
 		const set = new Set(whitelist);
-		const txtLines = await readLines(TXT_FILE);
+		const txtLines = await readLines(FILES.txt);
 		const filteredTxt = txtLines.filter(ip => !isWhitelisted(ip, set));
-		await writeLines(TXT_FILE, filteredTxt);
+		await writeLines(FILES.txt, filteredTxt);
 		console.log(`main.txt: removed ${txtLines.length - filteredTxt.length}`);
 
-		const csvRows = await readCsv(CSV_FILE);
+		const csvRows = await readCsv(FILES.csv);
 		const filteredCsv = csvRows.filter(r => r.IP && !isWhitelisted(r.IP.trim(), set));
-		await writeCsv(CSV_FILE, filteredCsv);
+		await writeCsv(FILES.csv, filteredCsv);
 		console.log(`details.csv: removed ${csvRows.length - filteredCsv.length}`);
 	} catch (err) {
 		console.error(err);
