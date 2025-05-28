@@ -1,106 +1,89 @@
 const fs = require('node:fs/promises');
-const fsSync = require('node:fs');
+const { existsSync } = require('node:fs');
 const path = require('node:path');
 const { parse } = require('csv-parse/sync');
 const { stringify } = require('csv-stringify/sync');
 const axios = require('./services/axios.js');
 
-const LISTS_DIR = path.join(__dirname, '..', 'lists');
-const FILES = {
-	txt: path.join(LISTS_DIR, 'main.txt'),
-	csv: path.join(LISTS_DIR, 'details.csv'),
-};
-
-const readLinesAsSet = async filePath => {
-	try {
-		const content = await fs.readFile(filePath, 'utf8');
-		return new Set(content.split(/\r?\n/).map(line => line.trim()).filter(Boolean));
-	} catch (err) {
-		if (err.code === 'ENOENT') return new Set();
-		throw err;
-	}
-};
-
-const readCsvRayIds = async filePath => {
-	try {
-		const content = await fs.readFile(filePath, 'utf8');
-		const records = parse(content, { columns: true, skip_empty_lines: true });
-		return new Set(records.map(r => r.RayID.trim()));
-	} catch (err) {
-		if (err.code === 'ENOENT') return new Set();
-		throw err;
-	}
-};
-
 (async () => {
 	const apiKey = process.env.MALICIOUS_IPS_LIST_SECRET;
 	if (!apiKey) throw new Error('MALICIOUS_IPS_LIST_SECRET environment variable not set');
 
-	try {
-		await fs.mkdir(LISTS_DIR, { recursive: true });
+	const listsDir = path.join(__dirname, '..', 'lists');
+	const txtPath = path.join(listsDir, 'main.txt');
+	const csvPath = path.join(listsDir, 'details.csv');
 
-		const { data } = await axios.get('https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb', { headers: { 'X-API-Key': apiKey } });
-		const logs = data?.logs ?? [];
+	await fs.mkdir(listsDir, { recursive: true });
 
-		const existingIPs = await readLinesAsSet(FILES.txt);
-		const existingRayIds = await readCsvRayIds(FILES.csv);
+	const res = await axios.get(
+		'https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb',
+		{ headers: { 'X-API-Key': apiKey } }
+	);
+	const logs = res.data?.logs ?? [];
 
-		const newIPsList = [];
-		const newCsvRows = [];
-		let newCsv = 0, newIPs = 0, skipped = 0, total = 0;
-
-		for (const { rayId, ip, endpoint, userAgent, action, country, timestamp } of logs) {
-			total++;
-
-			if (!existingIPs.has(ip)) {
-				newIPsList.push(ip);
-				existingIPs.add(ip);
-				newIPs++;
-			}
-
-			if (!existingRayIds.has(rayId)) {
-				newCsvRows.push({
-					Added:          new Date().toISOString(),
-					Date:           new Date(timestamp).toISOString(),
-					RayID:          rayId,
-					IP:             ip,
-					Endpoint:       endpoint,
-					'User-Agent':   userAgent,
-					'Action taken': action,
-					Country:        country,
-				});
-				existingRayIds.add(rayId);
-				newCsv++;
-			} else {
-				skipped++;
-			}
-		}
-
-		if (newIPsList.length) {
-			const txtPath = FILES.txt;
-			let prefix = '';
-			if (fsSync.existsSync(txtPath)) {
-				const tail = await fs.readFile(txtPath, 'utf8');
-				if (!tail.endsWith('\n')) prefix = '\n';
-			}
-
-			const block = prefix + newIPsList.join('\n') + '\n';
-			await fs.appendFile(txtPath, block, 'utf8');
-		}
-
-		if (newCsvRows.length) {
-			const csvPath = FILES.csv;
-			const needHeader = !fsSync.existsSync(csvPath);
-			const csvData = stringify(newCsvRows, { header: needHeader });
-			await fs.appendFile(csvPath, csvData, 'utf8');
-		}
-
-		console.log(`Total logs processed:     ${total}`);
-		console.log(`New IPs added to list:    ${newIPs}`);
-		console.log(`New entries added to CSV: ${newCsv}`);
-		console.log(`Skipped entries:          ${skipped}`);
-	} catch (err) {
-		console.error('[ERROR]', err.stack || err);
-		process.exit(1);
+	const ipSet = new Set();
+	if (existsSync(txtPath)) {
+		const content = await fs.readFile(txtPath, 'utf8');
+		content.split(/\r?\n/).forEach(line => line.trim() && ipSet.add(line.trim()));
 	}
+
+	const raySet = new Set();
+	if (existsSync(csvPath)) {
+		const content = await fs.readFile(csvPath, 'utf8');
+		parse(content, { columns: true, skip_empty_lines: true })
+			.map(r => r.RayID?.trim())
+			.filter(Boolean)
+			.forEach(id => raySet.add(id));
+	}
+
+	const newIps = [];
+	const newRows = [];
+	let skipped = 0;
+
+	for (const log of logs) {
+		const { rayId, ip, endpoint, userAgent, action, country, timestamp } = log;
+		if (!ipSet.has(ip)) {
+			ipSet.add(ip);
+			newIps.push(ip);
+		}
+
+		if (!raySet.has(rayId)) {
+			raySet.add(rayId);
+			newRows.push({
+				Added: new Date().toISOString(),
+				Date: new Date(timestamp).toISOString(),
+				RayID: rayId,
+				IP: ip,
+				Endpoint: endpoint,
+				'User-Agent': userAgent,
+				'Action taken': action,
+				Country: country,
+			});
+		} else {
+			skipped++;
+		}
+	}
+
+	if (newIps.length) {
+		let prefix = '';
+		if (existsSync(txtPath)) {
+			const tail = await fs.readFile(txtPath, 'utf8');
+			if (!(/\r?\n$/).test(tail)) prefix = '\n';
+		}
+		await fs.appendFile(txtPath, prefix + newIps.join('\n') + '\n', 'utf8');
+	}
+
+	if (newRows.length) {
+		const header = !existsSync(csvPath);
+		await fs.appendFile(
+			csvPath,
+			stringify(newRows, { header }),
+			'utf8'
+		);
+	}
+
+	console.log(`Total logs processed:     ${logs.length}`);
+	console.log(`New IPs added to list:    ${newIps.length}`);
+	console.log(`New entries added to CSV: ${newRows.length}`);
+	console.log(`Skipped entries:          ${skipped}`);
 })();
