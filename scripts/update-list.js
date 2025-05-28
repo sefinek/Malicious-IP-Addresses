@@ -25,21 +25,11 @@ const readCsvRayIds = async filePath => {
 	try {
 		const content = await fs.readFile(filePath, 'utf8');
 		const records = parse(content, { columns: true, skip_empty_lines: true });
-		return new Set(records.map(record => record.RayID.trim()));
+		return new Set(records.map(r => r.RayID.trim()));
 	} catch (err) {
 		if (err.code === 'ENOENT') return new Set();
 		throw err;
 	}
-};
-
-const appendLineToFile = async (filePath, line) => {
-	await fs.appendFile(filePath, `${line}\n`, 'utf8');
-};
-
-const appendCsvRows = async (filePath, rows) => {
-	const header = !fsSync.existsSync(filePath);
-	const csv = stringify(rows, { header });
-	await fs.appendFile(filePath, csv, 'utf8');
 };
 
 (async () => {
@@ -49,32 +39,35 @@ const appendCsvRows = async (filePath, rows) => {
 	try {
 		await fs.mkdir(LISTS_DIR, { recursive: true });
 
-		const response = await axios.get('https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb', { headers: { 'X-API-Key': apiKey } });
-		const logs = response.data?.logs ?? [];
+		const { data } = await axios.get('https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb', { headers: { 'X-API-Key': apiKey } });
+		const logs = data?.logs ?? [];
+
 		const existingIPs = await readLinesAsSet(FILES.txt);
 		const existingRayIds = await readCsvRayIds(FILES.csv);
-		const newCsvRows = [];
 
+		const newIPsList = [];
+		const newCsvRows = [];
 		let newCsv = 0, newIPs = 0, skipped = 0, total = 0;
+
 		for (const { rayId, ip, endpoint, userAgent, action, country, timestamp } of logs) {
 			total++;
 
 			if (!existingIPs.has(ip)) {
-				await appendLineToFile(FILES.txt, ip);
+				newIPsList.push(ip);
 				existingIPs.add(ip);
 				newIPs++;
 			}
 
 			if (!existingRayIds.has(rayId)) {
 				newCsvRows.push({
-					Added: new Date().toISOString(),
-					Date: new Date(timestamp).toISOString(),
-					RayID: rayId,
-					IP: ip,
-					Endpoint: endpoint,
-					'User-Agent': userAgent,
+					Added:          new Date().toISOString(),
+					Date:           new Date(timestamp).toISOString(),
+					RayID:          rayId,
+					IP:             ip,
+					Endpoint:       endpoint,
+					'User-Agent':   userAgent,
 					'Action taken': action,
-					Country: country,
+					Country:        country,
 				});
 				existingRayIds.add(rayId);
 				newCsv++;
@@ -83,8 +76,23 @@ const appendCsvRows = async (filePath, rows) => {
 			}
 		}
 
-		if (newCsvRows.length > 0) {
-			await appendCsvRows(FILES.csv, newCsvRows);
+		if (newIPsList.length) {
+			const txtPath = FILES.txt;
+			let prefix = '';
+			if (fsSync.existsSync(txtPath)) {
+				const tail = await fs.readFile(txtPath, 'utf8');
+				if (!tail.endsWith('\n')) prefix = '\n';
+			}
+
+			const block = prefix + newIPsList.join('\n') + '\n';
+			await fs.appendFile(txtPath, block, 'utf8');
+		}
+
+		if (newCsvRows.length) {
+			const csvPath = FILES.csv;
+			const needHeader = !fsSync.existsSync(csvPath);
+			const csvData = stringify(newCsvRows, { header: needHeader });
+			await fs.appendFile(csvPath, csvData, 'utf8');
 		}
 
 		console.log(`Total logs processed:     ${total}`);
