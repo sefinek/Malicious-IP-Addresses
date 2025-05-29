@@ -1,5 +1,5 @@
 const cluster = require('node:cluster');
-const { cpus } = require('node:os');
+const numCPUs = require('node:os').availableParallelism();
 const fs = require('node:fs/promises');
 const path = require('node:path');
 const { parse } = require('csv-parse/sync');
@@ -12,7 +12,8 @@ const FILES = {
 	txt: path.join(LISTS_DIR, 'main.txt'),
 	csv: path.join(LISTS_DIR, 'details.csv'),
 };
-const WHITELISTS = ['https://raw.githubusercontent.com/AnTheMaker/GoodBots/main/all.ips'];
+
+const WHITELISTS = ['https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt'];
 
 // Master-only
 let exitCount = 0;
@@ -55,6 +56,7 @@ const isWhitelisted = (ip, set) => {
 
 const readLines = async file => {
 	console.log(`[Master] readLines: reading ${file}`);
+
 	try {
 		const txt = await fs.readFile(file, 'utf8');
 		const lines = txt.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
@@ -68,6 +70,7 @@ const readLines = async file => {
 
 const readCsv = async file => {
 	console.log(`[Master] readCsv: reading ${file}`);
+
 	try {
 		const txt = await fs.readFile(file, 'utf8');
 		const rows = parse(txt, { columns: true, skip_empty_lines: true });
@@ -89,9 +92,9 @@ const writeCsv = (file, rows) => {
 		.then(() => console.log(`[Master] writeCsv: wrote ${rows.length} rows to ${file}`));
 };
 
-const chunk = (arr, n) => {
-	const out = Array.from({ length: n }, () => []);
-	arr.forEach((x, i) => out[i % n].push(x));
+const chunk = arr => {
+	const out = Array.from({ length: numCPUs }, () => []);
+	arr.forEach((x, i) => out[i % numCPUs].push(x));
 	return out;
 };
 
@@ -109,21 +112,23 @@ const chunk = (arr, n) => {
 		const allTxt = await readLines(FILES.txt);
 		const allCsv = await readCsv(FILES.csv);
 
-		const n = cpus().length;
-		console.log(`[Master] CPU cores: ${n}, spawning workers`);
-		const txtChunks = chunk(allTxt, n);
-		const csvChunks = chunk(allCsv, n);
+		console.log(`[Master] CPU cores: ${numCPUs}, spawning workers`);
 
-		for (let i = 0; i < n; i++) {
+		const txtChunks = chunk(allTxt);
+		const csvChunks = chunk(allCsv);
+
+		for (let i = 0; i < numCPUs; i++) {
 			const w = cluster.fork();
 			console.log(`[Master] forked worker ${w.id}`);
+
 			w.send({ wl: whitelist, txt: txtChunks[i], csv: csvChunks[i] });
 			w.on('message', msg => {
 				console.log(`[Master] from worker ${w.id}: removed ${msg.removedTxt.length} txt, ${msg.removedCsv.length} csv`);
 				removedTxtAll.push(...msg.removedTxt);
 				removedCsvAll.push(...msg.removedCsv);
 				done++;
-				if (done === n) {
+
+				if (done === numCPUs) {
 					console.log('[Master] all workers done, aggregating removals');
 					const remTxtSet = new Set(removedTxtAll);
 					const remCsvSet = new Set(removedCsvAll);
@@ -152,9 +157,8 @@ const chunk = (arr, n) => {
 			const removedCsv = csv
 				.filter(r => r.IP && isWhitelisted(r.IP.trim(), set))
 				.map(r => r.IP.trim());
-			console.log(
-				`[Worker ${cluster.worker.id}] done: txt->${removedTxt.length}, csv->${removedCsv.length}`
-			);
+
+			console.log(`[Worker ${cluster.worker.id}] done: txt->${removedTxt.length}, csv->${removedCsv.length}`);
 			process.send({ removedTxt, removedCsv });
 			process.exit();
 		});
@@ -164,7 +168,7 @@ const chunk = (arr, n) => {
 		console.log(`[Master] worker ${worker.id} exited (code=${code})`);
 		if (cluster.isMaster) {
 			exitCount++;
-			if (exitCount === cpus().length) console.log('[Master] all workers exited');
+			if (exitCount === numCPUs) console.log('[Master] all workers exited');
 		}
 	});
 })();
