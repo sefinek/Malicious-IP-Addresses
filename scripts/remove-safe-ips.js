@@ -13,7 +13,7 @@ const FILES = {
 	csv: path.join(LISTS_DIR, 'details.csv'),
 };
 
-const WHITELISTS = ['https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt'];
+const WHITELISTS = ['https://raw.githubusercontent.com/sefinek/GoodBots-IP-Whitelist/main/lists/all-safe-ips.txt'];
 
 // Master-only
 let exitCount = 0;
