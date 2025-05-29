@@ -22,7 +22,6 @@ const removedTxtAll = [];
 const removedCsvAll = [];
 
 const fetchAllWhitelists = async () => {
-	console.log('[Master] fetchAllWhitelists: start');
 	const results = await Promise.all(
 		WHITELISTS.map(url =>
 			axios.get(url).then(r => {
@@ -36,7 +35,7 @@ const fetchAllWhitelists = async () => {
 	);
 
 	const unique = [...new Set(results.flat())];
-	console.log(`[Master] fetchAllWhitelists: fetched ${unique.length} unique entries`);
+	console.log(`[Master 0] fetchAllWhitelists: fetched ${unique.length} unique entries`);
 	return unique;
 };
 
@@ -55,12 +54,12 @@ const isWhitelisted = (ip, set) => {
 };
 
 const readLines = async file => {
-	console.log(`[Master] readLines: reading ${file}`);
+	console.log(`[Master 0] readLines: reading ${file}`);
 
 	try {
 		const txt = await fs.readFile(file, 'utf8');
 		const lines = txt.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
-		console.log(`[Master] readLines: got ${lines.length} lines`);
+		console.log(`[Master 0] readLines: got ${lines.length} lines`);
 		return lines;
 	} catch (e) {
 		if (e.code === 'ENOENT') return [];
@@ -69,12 +68,12 @@ const readLines = async file => {
 };
 
 const readCsv = async file => {
-	console.log(`[Master] readCsv: reading ${file}`);
+	console.log(`[Master 0] readCsv: reading ${file}`);
 
 	try {
 		const txt = await fs.readFile(file, 'utf8');
 		const rows = parse(txt, { columns: true, skip_empty_lines: true });
-		console.log(`[Master] readCsv: got ${rows.length} rows`);
+		console.log(`[Master 0] readCsv: got ${rows.length} rows`);
 		return rows;
 	} catch (e) {
 		if (e.code === 'ENOENT') return [];
@@ -84,12 +83,12 @@ const readCsv = async file => {
 
 const writeLines = (file, lines) =>
 	fs.writeFile(file, lines.join('\n'), 'utf8')
-		.then(() => console.log(`[Master] writeLines: wrote ${lines.length} lines to ${file}`));
+		.then(() => console.log(`[Master 0] writeLines: wrote ${lines.length} lines to ${file}`));
 
 const writeCsv = (file, rows) => {
 	const out = rows.length ? stringify(rows, { header: true }) : '';
 	return fs.writeFile(file, out, 'utf8')
-		.then(() => console.log(`[Master] writeCsv: wrote ${rows.length} rows to ${file}`));
+		.then(() => console.log(`[Master 0] writeCsv: wrote ${rows.length} rows to ${file}`));
 };
 
 const chunk = arr => {
@@ -100,36 +99,36 @@ const chunk = arr => {
 
 (async () => {
 	if (cluster.isPrimary) {
-		console.log('[Master] start');
+		console.log('[Master 0] start');
 		await fs.mkdir(LISTS_DIR, { recursive: true });
 
 		const whitelist = await fetchAllWhitelists();
 		if (!whitelist.length) {
-			console.log('[Master] no whitelist entries, exiting...');
+			console.log('[Master 0] no whitelist entries, exiting...');
 			return;
 		}
 
 		const allTxt = await readLines(FILES.txt);
 		const allCsv = await readCsv(FILES.csv);
 
-		console.log(`[Master] CPU cores: ${numCPUs}, spawning workers`);
+		console.log(`[Master 0] CPU cores: ${numCPUs}, spawning workers`);
 
 		const txtChunks = chunk(allTxt);
 		const csvChunks = chunk(allCsv);
 
 		for (let i = 0; i < numCPUs; i++) {
 			const w = cluster.fork();
-			console.log(`[Master] forked worker ${w.id}`);
+			console.log(`[Master 0] forked worker ${w.id}`);
 
 			w.send({ wl: whitelist, txt: txtChunks[i], csv: csvChunks[i] });
 			w.on('message', msg => {
-				console.log(`[Master] from worker ${w.id}: removed ${msg.removedTxt.length} txt, ${msg.removedCsv.length} csv`);
+				console.log(`[Master 0] from worker ${w.id}: removed ${msg.removedTxt.length} txt, ${msg.removedCsv.length} csv`);
 				removedTxtAll.push(...msg.removedTxt);
 				removedCsvAll.push(...msg.removedCsv);
 				done++;
 
 				if (done === numCPUs) {
-					console.log('[Master] all workers done, aggregating removals');
+					console.log('[Master 0] all workers done, aggregating removals');
 					const remTxtSet = new Set(removedTxtAll);
 					const remCsvSet = new Set(removedCsvAll);
 
@@ -141,9 +140,9 @@ const chunk = arr => {
 
 					writeLines(FILES.txt, filteredTxt);
 					writeCsv(FILES.csv, filteredCsv);
-					console.log(`[Master] main.txt: removed ${allTxt.length - filteredTxt.length}`);
-					console.log(`[Master] details.csv: removed ${allCsv.length - filteredCsv.length}`);
-					console.log('[Master] processing complete ✅');
+					console.log(`[Master 0] main.txt: removed ${allTxt.length - filteredTxt.length}`);
+					console.log(`[Master 0] details.csv: removed ${allCsv.length - filteredCsv.length}`);
+					console.log('[Master 0] processing complete ✅');
 				}
 			});
 		}
@@ -165,10 +164,10 @@ const chunk = arr => {
 	}
 
 	cluster.on('exit', (worker, code) => {
-		console.log(`[Master] worker ${worker.id} exited (code=${code})`);
+		console.log(`[Master 0] worker ${worker.id} exited (code=${code})`);
 		if (cluster.isMaster) {
 			exitCount++;
-			if (exitCount === numCPUs) console.log('[Master] all workers exited');
+			if (exitCount === numCPUs) console.log('[Master 0] all workers exited');
 		}
 	});
 })();
