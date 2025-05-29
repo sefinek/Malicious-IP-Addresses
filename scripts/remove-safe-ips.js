@@ -96,7 +96,7 @@ const chunk = (arr, n) => {
 };
 
 (async () => {
-	if (cluster.isMaster) {
+	if (cluster.isPrimary) {
 		console.log('[Master] start');
 		await fs.mkdir(LISTS_DIR, { recursive: true });
 
