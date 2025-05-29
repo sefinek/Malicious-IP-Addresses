@@ -43,6 +43,7 @@ const isWhitelisted = (ip, set) => {
 	try {
 		const p = ipaddr.parse(ip);
 		if (set.has(ip)) return true;
+
 		for (const w of set) {
 			if (w.includes('/')) {
 				const [net, pre] = ipaddr.parseCIDR(w);
@@ -99,14 +100,10 @@ const chunk = arr => {
 
 (async () => {
 	if (cluster.isPrimary) {
-		console.log('[Master 0] start');
 		await fs.mkdir(LISTS_DIR, { recursive: true });
 
 		const whitelist = await fetchAllWhitelists();
-		if (!whitelist.length) {
-			console.log('[Master 0] no whitelist entries, exiting...');
-			return;
-		}
+		if (!whitelist.length) return console.log('[Master 0] no whitelist entries, exiting...');
 
 		const allTxt = await readLines(FILES.txt);
 		const allCsv = await readCsv(FILES.csv);
@@ -123,10 +120,10 @@ const chunk = arr => {
 			w.send({ wl: whitelist, txt: txtChunks[i], csv: csvChunks[i] });
 			w.on('message', msg => {
 				console.log(`[Master 0] from worker ${w.id}: removed ${msg.removedTxt.length} txt, ${msg.removedCsv.length} csv`);
+
 				removedTxtAll.push(...msg.removedTxt);
 				removedCsvAll.push(...msg.removedCsv);
 				done++;
-
 				if (done === numCPUs) {
 					console.log('[Master 0] all workers done, aggregating removals');
 					const remTxtSet = new Set(removedTxtAll);
@@ -165,7 +162,7 @@ const chunk = arr => {
 
 	cluster.on('exit', (worker, code) => {
 		console.log(`[Master 0] worker ${worker.id} exited (code=${code})`);
-		if (cluster.isMaster) {
+		if (!cluster.isPrimary) {
 			exitCount++;
 			if (exitCount === numCPUs) console.log('[Master 0] all workers exited');
 		}
