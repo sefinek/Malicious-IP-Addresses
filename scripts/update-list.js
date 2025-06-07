@@ -6,20 +6,14 @@ const { stringify } = require('csv-stringify/sync');
 const axios = require('./services/axios.js');
 
 (async () => {
-	const apiKey = process.env.MALICIOUS_IPS_LIST_SECRET;
-	if (!apiKey) throw new Error('MALICIOUS_IPS_LIST_SECRET environment variable not set');
+	const apiKey = process.argv.find(arg => arg.startsWith('--secret='))?.split('=')[1];
+	if (!apiKey) throw new Error('--secret not provided');
 
 	const listsDir = path.join(__dirname, '..', 'lists');
 	const txtPath = path.join(listsDir, 'main.txt');
 	const csvPath = path.join(listsDir, 'details.csv');
 
 	await fs.mkdir(listsDir, { recursive: true });
-
-	const res = await axios.get(
-		'https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb',
-		{ headers: { 'X-API-Key': apiKey } }
-	);
-	const logs = res.data?.logs ?? [];
 
 	const ipSet = new Set();
 	if (existsSync(txtPath)) {
@@ -36,10 +30,11 @@ const axios = require('./services/axios.js');
 			.forEach(id => raySet.add(id));
 	}
 
-	const newIps = [];
-	const newRows = [];
+	const newIps = [], newRows = [];
 	let skipped = 0;
 
+	const res = await axios.get('https://api.sefinek.net/api/v2/cloudflare-waf-abuseipdb', { headers: { 'X-API-Key': apiKey } });
+	const logs = res.data?.logs ?? [];
 	for (const log of logs) {
 		const { rayId, ip, endpoint, userAgent, action, country, timestamp } = log;
 		if (!ipSet.has(ip)) {

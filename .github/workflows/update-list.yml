@@ -25,9 +25,7 @@ jobs:
         run: npm ci --omit=dev
 
       - name: Fetch malicious IPs from api.sefinek.net
-        run: node .
-        env:
-          MALICIOUS_IPS_LIST_SECRET: ${{ secrets.MALICIOUS_IPS_LIST_SECRET }}
+        run: node . --secret=${{ secrets.MALICIOUS_IPS_LIST_SECRET }}
 
       - name: Cleanup
         run: node scripts/cleanup.js
