@@ -32,12 +32,12 @@ const logStats = (fileName, counts) => {
 	};
 
 	console.log(`📄 ${fileName}`);
-	console.log(`  • total entries        : ${total}`);
-	console.log(`  • valid public         : ${counts.public}`);
-	if ('duplicates' in counts) console.log(`  • duplicate public IPs : ${counts.duplicates}`);
-	console.log(`  • removed non-public   : ${counts.nonPublic} (${percent(counts.nonPublic)})`);
-	console.log(`  • removed invalid      : ${counts.invalid} (${percent(counts.invalid)})`);
-	console.log(`  • total removed        : ${removed} (${percent(removed)})`);
+	console.log(`  • Total entries        : ${total}`);
+	console.log(`  • Valid public         : ${counts.public}`);
+	console.log(`  • Duplicate public IPs : ${counts.duplicates}`);
+	console.log(`  • Removed non-public   : ${counts.nonPublic} (${percent(counts.nonPublic)})`);
+	console.log(`  • Removed invalid      : ${counts.invalid} (${percent(counts.invalid)})`);
+	console.log(`  • Total removed        : ${removed} (${percent(removed)})`);
 };
 
 const cleanTextFile = async filePath => {
@@ -48,7 +48,6 @@ const cleanTextFile = async filePath => {
 		const counts = { public: 0, nonPublic: 0, invalid: 0, duplicates: 0 };
 		const seen = new Set();
 		const cleaned = [];
-
 		for (const ip of lines) {
 			const type = classifyIp(ip);
 			if (type === 'public') {
@@ -65,6 +64,7 @@ const cleanTextFile = async filePath => {
 				counts.invalid++;
 			}
 		}
+
 		await fs.writeFile(filePath, cleaned.join('\n'), 'utf8');
 		logStats(path.basename(filePath), counts);
 	} catch (err) {
@@ -74,11 +74,10 @@ const cleanTextFile = async filePath => {
 
 const cleanCsvFile = async filePath => {
 	try {
-		const content = await fs.readFile(filePath, 'utf8');
-		const records = parse(content, { columns: true, skip_empty_lines: true });
-
 		const counts = { public: 0, nonPublic: 0, invalid: 0 };
 
+		const content = await fs.readFile(filePath, 'utf8');
+		const records = parse(content, { columns: true, skip_empty_lines: true });
 		const cleaned = records.filter(row => {
 			const type = classifyIp(row.IP);
 			if (type === 'public') {
