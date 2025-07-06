@@ -6,6 +6,10 @@ Many of them are part of botnets or VPN/proxy networks used to conduct cyberatta
 📄 **Looking for solid and effective Cloudflare WAF expressions? Check out [sefinek/Cloudflare-WAF-Expressions](https://github.com/sefinek/Cloudflare-WAF-Expressions)**
 
 
+## SniffCat
+Looking for better blacklists? Visit [sniffcat.com](https://sniffcat.com)! SniffCat is the new alternative to AbuseIPDB!
+
+
 ## What Can This List Block?
 1. ✅ DDoS attacks (L7 – HTTP flood)
     - HTTP requests from known botnets
