@@ -45,12 +45,8 @@ class LogParser {
 	}
 
 	generateComment(entry) {
-		let comment = `DDoS Attack: HTTP requests trying to impersonate browsers. Endpoint ${entry.endpoint}`;
-
-		if (entry.userAgent && entry.userAgent !== '-') {
-			comment += `. UA: ${entry.userAgent}`;
-		}
-
+		let comment = `DDoS Attack: Endpoint ${entry.endpoint}`;
+		if (entry.userAgent && entry.userAgent !== '-') comment += `. UA: ${entry.userAgent}`;
 		return comment;
 	}
 
