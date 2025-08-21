@@ -44,6 +44,9 @@ jobs:
         run: |
           set -euo pipefail
 
+          git config user.name "$COMMIT_NAME"
+          git config user.email "$COMMIT_EMAIL"
+
           git add -A
           if git diff --cached --quiet; then
             echo "Canceled: Nothing to commit."
@@ -53,9 +56,14 @@ jobs:
           MODIFIED_FILES=$(git diff --cached --name-only)
           FILE_COUNT=$(printf '%s\n' "$MODIFIED_FILES" | grep -c . || true)
 
-          git -c user.name="$COMMIT_NAME" -c user.email="$COMMIT_EMAIL" \
-              commit -m "Updated list of malicious IP addresses [$FILE_COUNT file(s)]" \
-                      -m "$MODIFIED_FILES"
+          git commit -m "Updated list of malicious IP addresses [$FILE_COUNT file(s)]" \
+                     -m "$MODIFIED_FILES"
 
-          git pull origin main
+          git fetch origin main
+          git rebase origin/main || {
+            echo "Rebase failed. Aborting."
+            git rebase --abort || true
+            exit 1
+          }
+
           git push origin HEAD:main
