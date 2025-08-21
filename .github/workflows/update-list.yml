@@ -58,5 +58,4 @@ jobs:
                       -m "$MODIFIED_FILES"
 
           git pull origin main
-
           git push origin HEAD:main
