@@ -57,7 +57,6 @@ jobs:
               commit -m "Updated list of malicious IP addresses [$FILE_COUNT file(s)]" \
                       -m "$MODIFIED_FILES"
 
-          git fetch origin main
-          git rebase origin/main
+          git pull origin main
 
           git push origin HEAD:main
