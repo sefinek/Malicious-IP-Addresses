@@ -136,6 +136,7 @@ class LogParser {
 		const csvLines = [];
 		const ipList = [];
 		const category = this.getCategory();
+		const dateStr = new Date().toISOString().split('T')[0];
 
 		for (const [ip, entry] of this.ipDataMap) {
 			const comment = this.generateComment(entry);
@@ -144,11 +145,11 @@ class LogParser {
 		}
 
 		const csvContent = '"IP","Categories","ReportDate","Comment"\n' + csvLines.join('\n');
-		fs.writeFileSync('log_report.csv', csvContent, 'utf8');
-		console.log(`Generated log_report.csv with ${csvLines.length} entries`);
+		fs.writeFileSync(`${dateStr}.csv`, csvContent, 'utf8');
+		console.log(`Generated log_report_${dateStr}.csv with ${csvLines.length} entries`);
 
-		fs.writeFileSync('ip_addresses.txt', ipList.join('\n'), 'utf8');
-		console.log(`Generated ip_addresses.txt with ${ipList.length} unique IPs`);
+		fs.writeFileSync(`${dateStr}.txt`, ipList.join('\n'), 'utf8');
+		console.log(`Generated ip_addresses_${dateStr}.txt with ${ipList.length} unique IPs`);
 
 		this.printStats();
 	}
