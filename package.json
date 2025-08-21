@@ -11,6 +11,7 @@
   },
   "license": "MIT",
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
+  "type": "module",
   "main": "scripts/update-list.js",
   "scripts": {
     "remove": "node removeByCriteria.js",

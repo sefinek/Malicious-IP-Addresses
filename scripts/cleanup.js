@@ -1,8 +1,12 @@
-const fs = require('node:fs/promises');
-const path = require('node:path');
-const { parse } = require('csv-parse/sync');
-const { stringify } = require('csv-stringify/sync');
-const ipaddr = require('ipaddr.js');
+import fs from 'node:fs/promises';
+import path, { dirname } from 'node:path';
+import { parse } from 'csv-parse/sync';
+import { stringify } from 'csv-stringify/sync';
+import ipaddr from 'ipaddr.js';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const LISTS_DIR = path.join(__dirname, '..', 'lists');
 const FILES = {

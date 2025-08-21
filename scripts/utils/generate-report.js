@@ -1,5 +1,5 @@
-const fs = require('node:fs');
-const ipaddr = require('ipaddr.js');
+import fs from 'node:fs';
+import ipaddr from 'ipaddr.js';
 
 class LogParser {
 	constructor() {

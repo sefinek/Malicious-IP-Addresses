@@ -1,9 +1,13 @@
-const fs = require('node:fs/promises');
-const { existsSync } = require('node:fs');
-const path = require('node:path');
-const { parse } = require('csv-parse/sync');
-const { stringify } = require('csv-stringify/sync');
-const axios = require('./services/axios.js');
+import fs from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import path, { dirname } from 'node:path';
+import { parse } from 'csv-parse/sync';
+import { stringify } from 'csv-stringify/sync';
+import axios from './services/axios.js';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 (async () => {
 	const apiKey = process.argv.find(arg => arg.startsWith('--secret='))?.split('=')[1];

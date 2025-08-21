@@ -1,8 +1,12 @@
-const fs = require('node:fs');
-const path = require('node:path');
-const { parse } = require('csv-parse');
+import fs from 'node:fs';
+import path, { dirname } from 'node:path';
+import { parse } from 'csv-parse';
+import { fileURLToPath } from 'node:url';
 
-const LISTS_DIR = path.join(__dirname, '..', 'lists');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const LISTS_DIR = path.join(__dirname, 'lists');
 const FILES = {
 	txt: path.join(LISTS_DIR, 'main.txt'),
 	csv: path.join(LISTS_DIR, 'details.csv'),
