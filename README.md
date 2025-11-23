@@ -37,7 +37,7 @@ If you notice a longer lack of updates, you can report it via an [issue](https:/
 The list is actively maintained and will not be abandoned.
 
 
-## Available Files
+## Available files
 ### 📄 TXT (recommended)
 ```text
 https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
