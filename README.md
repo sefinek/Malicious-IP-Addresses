@@ -74,4 +74,4 @@ wget -nv -O blacklist.csv https://raw.githubusercontent.com/sefinek/Malicious-IP
 
 
 ## MIT License
-Copyright © 2024–2025 Sefinek (https://sefinek.net)
+Copyright © 2024–2025 [Sefinek](https://sefinek.net)
