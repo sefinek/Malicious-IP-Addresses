@@ -24,7 +24,8 @@ If you find this repository helpful, consider leaving a star. Thank you, have a 
 4. ✅ Malicious VPNs and proxies used for abuse
 
 > [!IMPORTANT]
-> Blocking IP addresses should be done carefully to avoid restricting legitimate traffic. Regular updates of the list are recommended.
+> Blocking IP addresses should be done carefully to avoid restricting legitimate traffic.
+> Regular updates of the list are recommended.
 
 
 ## Cron
