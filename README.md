@@ -36,7 +36,7 @@ The list is actively maintained and will not be abandoned.
 
 
 ## Available Files
-### ✅ TXT (recommended)
+### 📄 TXT (recommended)
 ```text
 https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
 ```
