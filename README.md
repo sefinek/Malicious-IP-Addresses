@@ -42,7 +42,7 @@ https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main
 
 #### Download via curl
 ```bash
-curl -L --progress-bar -o main.txt https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
+curl -s -o blacklist.txt https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
 ```
 
 ### 📊 CSV
@@ -52,7 +52,7 @@ https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/deta
 
 #### Download via curl
 ```bash
-curl -L --progress-bar -o details.csv https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
+curl -s -o blacklist.csv https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
 ```
 
 > [!IMPORTANT]  
