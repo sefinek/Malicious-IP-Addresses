@@ -13,7 +13,7 @@ If you find this repository helpful, consider leaving a star. Thank you, have a 
 > You can find the documentation [here](https://sniffcat.com/documentation/api/blacklist).
 
 Do you have any questions or need assistance? Create [a new issue](https://github.com/sefinek/Malicious-IP-Addresses/issues) or join [my Discord server](https://discord.gg/S7NDzCzQTg).
-I also post important updates and announcements there. 😉
+I also post important updates and announcements there. My email address: contact@sefinek.net 😉
 
 ## What can this list block?
 1. ✅ DDoS attacks (L7 – HTTP flood)
