@@ -56,7 +56,7 @@ wget -nv -O blacklist.txt https://raw.githubusercontent.com/sefinek/Malicious-IP
 https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
 ```
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > This file contains user agents, endpoints, and IP addresses that have been blacklisted.
 > Not all IP addresses from [main.txt](lists/main.txt) are included in [details.csv](lists/details.csv)!
 
