@@ -41,9 +41,14 @@ The list is actively maintained and will not be abandoned.
 https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
 ```
 
-#### Download via curl
+#### curl
 ```bash
-curl -s -o blacklist.txt https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
+curl -fsS -o blacklist.txt https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
+```
+
+#### wget
+```bash
+wget -nv -O blacklist.txt https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/main.txt
 ```
 
 ### 📊 CSV
@@ -51,9 +56,14 @@ curl -s -o blacklist.txt https://raw.githubusercontent.com/sefinek/Malicious-IP-
 https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
 ```
 
-#### Download via curl
+#### curl
 ```bash
-curl -s -o blacklist.csv https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
+curl -fsS -o blacklist.csv https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
+```
+
+#### wget
+```bash
+wget -nv -O blacklist.csv https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
 ```
 
 > [!IMPORTANT]  
