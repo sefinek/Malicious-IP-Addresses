@@ -56,6 +56,10 @@ wget -nv -O blacklist.txt https://raw.githubusercontent.com/sefinek/Malicious-IP
 https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
 ```
 
+> [!IMPORTANT]  
+> This file contains user agents, endpoints, and IP addresses that have been blacklisted.
+> Not all IP addresses from [main.txt](lists/main.txt) are included in [details.csv](lists/details.csv)!
+
 #### curl
 ```bash
 curl -fsS -o blacklist.csv https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
@@ -65,10 +69,6 @@ curl -fsS -o blacklist.csv https://raw.githubusercontent.com/sefinek/Malicious-I
 ```bash
 wget -nv -O blacklist.csv https://raw.githubusercontent.com/sefinek/Malicious-IP-Addresses/main/lists/details.csv
 ```
-
-> [!IMPORTANT]  
-> This file contains user agents, endpoints, and IP addresses that have been blacklisted.
-> Not all IP addresses from [main.txt](lists/main.txt) are included in [details.csv](lists/details.csv)!
 
 
 ## MIT License
