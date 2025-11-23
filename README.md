@@ -12,6 +12,7 @@ If you find this repository helpful, consider leaving a star. Thank you, have a 
 > Data can be downloaded in JSON or TXT format and is regularly updated based on submissions from our users. Results are generated automatically and available completely free of charge!  
 > You can find the documentation [here](https://sniffcat.com/documentation/api/blacklist).
 
+Do you have any questions or need assistance? Create [a new issue](https://github.com/sefinek/Malicious-IP-Addresses/issues) or join [my Discord server](https://discord.gg/S7NDzCzQTg). I also post important updates and announcements there.
 
 ## What can this list block?
 1. ✅ DDoS attacks (L7 – HTTP flood)
@@ -31,7 +32,7 @@ If you find this repository helpful, consider leaving a star. Thank you, have a 
 
 ## Cron
 Updates usually occur **every 2 hours**, but sometimes a delay of several days may occur.
-If you notice a longer lack of updates, you can report it via an [Issue](https://github.com/sefinek/Malicious-IP-Addresses/issues).
+If you notice a longer lack of updates, you can report it via an [issue](https://github.com/sefinek/Malicious-IP-Addresses/issues).
 The list is actively maintained and will not be abandoned.
 
 
