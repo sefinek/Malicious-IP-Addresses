@@ -1,4 +1,4 @@
-# 📃 Malicious IP Address List
+# 🤬 Malicious IP Address List
 This repository contains a list of IP addresses associated with various malicious activities on the internet.
 Many of them belong to botnets or VPN/proxy networks used to carry out attacks, including DDoS and other forms of abuse.
 If you find this repository helpful, consider leaving a star. Thank you, have a nice day!
