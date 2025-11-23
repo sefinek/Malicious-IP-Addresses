@@ -29,7 +29,7 @@ If you find this repository helpful, consider leaving a star. Thank you, have a 
 
 
 ## Cron
-Updates usually occur every 2 hours, but sometimes a delay of several days may occur.
+Updates usually occur **every 2 hours**, but sometimes a delay of several days may occur.
 If you notice a longer lack of updates, you can report it via an [Issue](https://github.com/sefinek/Malicious-IP-Addresses/issues).
 The list is actively maintained and will not be abandoned.
 
