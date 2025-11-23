@@ -8,7 +8,7 @@ If you find this repository helpful, consider leaving a star. Thank you, have a 
 > [!TIP]
 > Looking for a better alternative? Visit [sniffcat.com](https://sniffcat.com) — a new and efficient alternative to AbuseIPDB.
 > The service provides detailed reports on malicious IP addresses and offers filtering by confidence score, countries, categories, and IP version.
-> Data can be downloaded in JSON or TXT format and is regularly updated based on submissions from our users. Results are generated automatically and available completely free of charge!
+> Data can be downloaded in JSON or TXT format and is regularly updated based on submissions from our users. Results are generated automatically and available completely free of charge!  
 > You can find the documentation [here](https://sniffcat.com/documentation/api/blacklist).
 
 
@@ -24,7 +24,7 @@ If you find this repository helpful, consider leaving a star. Thank you, have a 
 4. ✅ Malicious VPNs and proxies used for abuse
 
 > [!IMPORTANT]
-> Blocking IP addresses should be done carefully to avoid restricting legitimate traffic.
+> Blocking IP addresses should be done carefully to avoid restricting legitimate traffic.  
 > Regular updates of the list are recommended.
 
 
