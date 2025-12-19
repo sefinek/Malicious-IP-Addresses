@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import ipaddr from 'ipaddr.js';
+import { compareIps } from './ip-utils.js';
 
 const DEFAULT_CONFIG = {
 	inputFile: 'ddos.txt',
@@ -166,29 +167,6 @@ class LogParser {
 	}
 
 	/**
-	 * Compares two IP addresses for sorting.
-	 * @param {string} ipA - First IP address
-	 * @param {string} ipB - Second IP address
-	 * @returns {number} Comparison result
-	 */
-	compareIps(ipA, ipB) {
-		try {
-			const parsedA = ipaddr.parse(ipA);
-			const parsedB = ipaddr.parse(ipB);
-			const bytesA = parsedA.toByteArray();
-			const bytesB = parsedB.toByteArray();
-
-			for (let i = 0; i < Math.max(bytesA.length, bytesB.length); i++) {
-				const diff = (bytesA[i] || 0) - (bytesB[i] || 0);
-				if (diff !== 0) return diff;
-			}
-			return 0;
-		} catch {
-			return ipA.localeCompare(ipB);
-		}
-	}
-
-	/**
 	 * Generates CSV and TXT reports.
 	 */
 	generateReports() {
@@ -204,7 +182,7 @@ class LogParser {
 		const dateStr = new Date().toISOString().split('T')[0];
 
 		// Sort IPs before processing
-		const sortedEntries = Array.from(this.ipDataMap.entries()).sort((a, b) => this.compareIps(a[0], b[0]));
+		const sortedEntries = Array.from(this.ipDataMap.entries()).sort((a, b) => compareIps(a[0], b[0]));
 		for (const [ip, entry] of sortedEntries) {
 			const comment = this.generateComment(entry);
 			csvLines.push(`"${ip}","${category}","${entry.date}","${comment}"`);

@@ -14,10 +14,14 @@
   "type": "module",
   "main": "scripts/update-list.js",
   "scripts": {
+    "cleanup": "node scripts/cleanup.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "remove": "node removeByCriteria.js",
     "report": "node scripts/utils/generate-report.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "up": "ncu -u && npm install && npm update && npm audit fix"
+    "up": "ncu -u && npm install && npm update && npm audit fix",
+    "update": "node scripts/update-list.js"
   },
   "dependencies": {
     "axios": "^1.13.2",
@@ -27,6 +31,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
     "globals": "^16.5.0"
   }
 }

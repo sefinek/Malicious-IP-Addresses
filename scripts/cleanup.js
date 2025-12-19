@@ -2,8 +2,8 @@ import fs from 'node:fs/promises';
 import path, { dirname } from 'node:path';
 import { parse } from 'csv-parse/sync';
 import { stringify } from 'csv-stringify/sync';
-import ipaddr from 'ipaddr.js';
 import { fileURLToPath } from 'node:url';
+import { classifyIp, compareIps } from './utils/ip-utils.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -12,46 +12,6 @@ const LISTS_DIR = path.join(__dirname, '..', 'lists');
 const FILES = {
 	txt: path.join(LISTS_DIR, 'main.txt'),
 	csv: path.join(LISTS_DIR, 'details.csv'),
-};
-
-const NON_PUBLIC_RANGES = new Set([
-	'unspecified', 'multicast', 'linkLocal', 'loopback', 'reserved', 'benchmarking',
-	'amt', 'broadcast', 'carrierGradeNat', 'private', 'as112', 'uniqueLocal',
-	'ipv4Mapped', 'rfc6145', '6to4', 'teredo', 'as112v6', 'orchid2', 'droneRemoteIdProtocolEntityTags',
-]);
-
-/**
- * Classifies an IP address as public, non-public, or invalid.
- * @param {string} ip - The IP address to classify
- * @returns {'public'|'nonPublic'|'invalid'} The classification
- */
-const classifyIp = ip => {
-	if (!ipaddr.isValid(ip)) return 'invalid';
-	const range = ipaddr.parse(ip).range();
-	return NON_PUBLIC_RANGES.has(range) ? 'nonPublic' : 'public';
-};
-
-/**
- * Compares two IP addresses for sorting.
- * @param {string} ipA - First IP address
- * @param {string} ipB - Second IP address
- * @returns {number} Comparison result
- */
-const compareIps = (ipA, ipB) => {
-	try {
-		const parsedA = ipaddr.parse(ipA);
-		const parsedB = ipaddr.parse(ipB);
-		const bytesA = parsedA.toByteArray();
-		const bytesB = parsedB.toByteArray();
-
-		for (let i = 0; i < Math.max(bytesA.length, bytesB.length); i++) {
-			const diff = (bytesA[i] || 0) - (bytesB[i] || 0);
-			if (diff !== 0) return diff;
-		}
-		return 0;
-	} catch {
-		return ipA.localeCompare(ipB);
-	}
 };
 
 /**

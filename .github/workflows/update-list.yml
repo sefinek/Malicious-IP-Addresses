@@ -32,10 +32,10 @@ jobs:
         run: npm ci --omit=dev
 
       - name: Fetch malicious IPs from api.sefinek.net
-        run: node . --secret=${{ secrets.API_SECRET_TOKEN }}
+        run: npm run update -- --secret=${{ secrets.API_SECRET_TOKEN }}
 
-      - name: Cleanup
-        run: node scripts/cleanup.js
+      - name: Cleanup and sort lists
+        run: npm run cleanup
 
       - name: Commit and push changes
         env:
