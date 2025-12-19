@@ -20,96 +20,185 @@ const NON_PUBLIC_RANGES = new Set([
 	'ipv4Mapped', 'rfc6145', '6to4', 'teredo', 'as112v6', 'orchid2', 'droneRemoteIdProtocolEntityTags',
 ]);
 
+/**
+ * Classifies an IP address as public, non-public, or invalid.
+ * @param {string} ip - The IP address to classify
+ * @returns {'public'|'nonPublic'|'invalid'} The classification
+ */
 const classifyIp = ip => {
 	if (!ipaddr.isValid(ip)) return 'invalid';
 	const range = ipaddr.parse(ip).range();
 	return NON_PUBLIC_RANGES.has(range) ? 'nonPublic' : 'public';
 };
 
-const logStats = (fileName, counts) => {
-	const total = counts.public + counts.nonPublic + counts.invalid;
-	const removed = counts.nonPublic + counts.invalid;
-	const percent = n => {
-		if (n === 0) return '0.000%';
-		const p = (n / total) * 100;
-		return p < 0.001 ? '<0.001%' : `${p.toFixed(3)}%`;
-	};
+/**
+ * Compares two IP addresses for sorting.
+ * @param {string} ipA - First IP address
+ * @param {string} ipB - Second IP address
+ * @returns {number} Comparison result
+ */
+const compareIps = (ipA, ipB) => {
+	try {
+		const parsedA = ipaddr.parse(ipA);
+		const parsedB = ipaddr.parse(ipB);
+		const bytesA = parsedA.toByteArray();
+		const bytesB = parsedB.toByteArray();
+
+		for (let i = 0; i < Math.max(bytesA.length, bytesB.length); i++) {
+			const diff = (bytesA[i] || 0) - (bytesB[i] || 0);
+			if (diff !== 0) return diff;
+		}
+		return 0;
+	} catch {
+		return ipA.localeCompare(ipB);
+	}
+};
+
+/**
+ * Formats a number as a percentage.
+ * @param {number} value - The value to format
+ * @param {number} total - The total for percentage calculation
+ * @returns {string} Formatted percentage
+ */
+const formatPercent = (value, total) => {
+	if (value === 0 || total === 0) return '0.000%';
+	const percent = (value / total) * 100;
+	return percent < 0.001 ? '<0.001%' : `${percent.toFixed(3)}%`;
+};
+
+/**
+ * Logs statistics about the cleanup process.
+ * @param {string} fileName - Name of the file being processed
+ * @param {Object} counts - Statistics object
+ * @param {boolean} duplicatesRemoved - Whether duplicates were removed
+ */
+const logStats = (fileName, counts, duplicatesRemoved = true) => {
+	const total = counts.public + counts.nonPublic + counts.invalid + counts.duplicates;
+	const removed = counts.nonPublic + counts.invalid + (duplicatesRemoved ? counts.duplicates : 0);
 
 	console.log(`📄 ${fileName}`);
 	console.log(`  • Total entries        : ${total}`);
 	console.log(`  • Valid public         : ${counts.public}`);
-	console.log(`  • Duplicate public IPs : ${counts.duplicates}`);
-	console.log(`  • Removed non-public   : ${counts.nonPublic} (${percent(counts.nonPublic)})`);
-	console.log(`  • Removed invalid      : ${counts.invalid} (${percent(counts.invalid)})`);
-	console.log(`  • Total removed        : ${removed} (${percent(removed)})`);
+	console.log(`  • Duplicate public IPs : ${counts.duplicates} (${formatPercent(counts.duplicates, total)})${duplicatesRemoved ? '' : ' [kept]'}`);
+	console.log(`  • Removed non-public   : ${counts.nonPublic} (${formatPercent(counts.nonPublic, total)})`);
+	console.log(`  • Removed invalid      : ${counts.invalid} (${formatPercent(counts.invalid, total)})`);
+	console.log(`  • Total removed        : ${removed} (${formatPercent(removed, total)})`);
 };
 
-const cleanTextFile = async filePath => {
-	try {
-		const content = await fs.readFile(filePath, 'utf8');
-		const lines = content.split('\n').map(line => line.trim()).filter(Boolean);
+/**
+ * Processes IP addresses and filters duplicates and invalid entries.
+ * @param {Iterable<string>} ipAddresses - Iterator of IP addresses
+ * @param {boolean} removeDuplicates - Whether to remove duplicate IPs
+ * @returns {Object} Object containing cleaned IPs and statistics
+ */
+const processIpAddresses = (ipAddresses, removeDuplicates = true) => {
+	const counts = { public: 0, nonPublic: 0, invalid: 0, duplicates: 0 };
+	const seen = new Set();
+	const cleaned = [];
 
-		const counts = { public: 0, nonPublic: 0, invalid: 0, duplicates: 0 };
-		const seen = new Set();
-		const cleaned = [];
-		for (const ip of lines) {
-			const type = classifyIp(ip);
-			if (type === 'public') {
-				if (seen.has(ip)) {
+	for (const ip of ipAddresses) {
+		const type = classifyIp(ip);
+
+		if (type === 'public') {
+			if (removeDuplicates && seen.has(ip)) {
+				counts.duplicates++;
+			} else {
+				if (removeDuplicates) seen.add(ip);
+				if (!removeDuplicates && seen.has(ip)) {
 					counts.duplicates++;
 				} else {
 					seen.add(ip);
-					cleaned.push(ip);
-					counts.public++;
 				}
-			} else if (type === 'nonPublic') {
-				counts.nonPublic++;
-			} else {
-				counts.invalid++;
+				cleaned.push(ip);
+				counts.public++;
 			}
+		} else if (type === 'nonPublic') {
+			counts.nonPublic++;
+		} else {
+			counts.invalid++;
 		}
+	}
 
-		await fs.writeFile(filePath, cleaned.join('\n'), 'utf8');
+	return { cleaned, counts };
+};
+
+/**
+ * Cleans and processes a plain text file containing IP addresses.
+ * @param {string} filePath - Path to the text file
+ */
+const cleanTextFile = async filePath => {
+	try {
+		const content = await fs.readFile(filePath, 'utf8');
+		const lines = content
+			.split('\n')
+			.map(line => line.trim())
+			.filter(Boolean);
+
+		const { cleaned, counts } = processIpAddresses(lines);
+
+		cleaned.sort(compareIps);
+		await fs.writeFile(filePath, cleaned.join('\n') + '\n', 'utf8');
+
 		logStats(path.basename(filePath), counts);
 	} catch (err) {
 		if (err.code !== 'ENOENT') throw err;
 	}
 };
 
+/**
+ * Cleans and processes a CSV file containing IP addresses.
+ * @param {string} filePath - Path to the CSV file
+ */
 const cleanCsvFile = async filePath => {
 	try {
-		const counts = { public: 0, nonPublic: 0, invalid: 0 };
-
 		const content = await fs.readFile(filePath, 'utf8');
 		const records = parse(content, { columns: true, skip_empty_lines: true });
-		const cleaned = records.filter(row => {
+
+		// Process records and filter invalid/non-public IPs
+		const { counts } = processIpAddresses(
+			records.map(row => row.IP || ''),
+			false // Keep duplicates in CSV
+		);
+
+		const cleanedRecords = records.filter(row => {
+			if (!row.IP) return false;
 			const type = classifyIp(row.IP);
-			if (type === 'public') {
-				counts.public++;
-				return true;
-			} else if (type === 'nonPublic') {
-				counts.nonPublic++;
-			} else {
-				counts.invalid++;
-			}
-			return false;
+			return type === 'public';
 		});
 
-		if (cleaned.length) {
-			const output = stringify(cleaned, { header: true, columns: Object.keys(cleaned[0]) });
+		// Sort by IP
+		cleanedRecords.sort((a, b) => compareIps(a.IP, b.IP));
+
+		// Update counts for missing IP column
+		const missingIpCount = records.filter(row => !row.IP).length;
+		counts.invalid += missingIpCount;
+
+		if (cleanedRecords.length > 0) {
+			const output = stringify(cleanedRecords, {
+				header: true,
+				columns: Object.keys(cleanedRecords[0]),
+			});
 			await fs.writeFile(filePath, output, 'utf8');
 		} else {
 			await fs.writeFile(filePath, '', 'utf8');
 		}
 
-		logStats(path.basename(filePath), counts);
+		logStats(path.basename(filePath), counts, false);
 	} catch (err) {
 		if (err.code !== 'ENOENT') throw err;
 	}
 };
 
-(async () => {
+/**
+ * Main execution function
+ */
+const main = async () => {
 	await cleanTextFile(FILES.txt);
 	console.log();
 	await cleanCsvFile(FILES.csv);
-})();
+};
+
+main().catch(err => {
+	console.error('Fatal error:', err);
+	process.exit(1);
+});
