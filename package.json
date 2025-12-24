@@ -17,10 +17,10 @@
     "cleanup": "node scripts/cleanup.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "m": "ncu -u && npm install && npm update",
     "remove": "node removeByCriteria.js",
     "report": "node scripts/utils/generate-report.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "up": "ncu -u && npm install && npm update && npm audit fix",
     "update": "node scripts/update-list.js"
   },
   "dependencies": {
