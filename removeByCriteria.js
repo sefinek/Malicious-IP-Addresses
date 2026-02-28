@@ -97,7 +97,7 @@ const removeFromCsv = async (filePath, criteria, columnName) => {
  * @param {string} criteria - Value to search for
  * @param {string} criteriaType - Type of criteria (endpoint, ip, userAgent)
  */
-// eslint-disable-next-line no-unused-vars
+
 const removeByCriteria = async (criteria, criteriaType) => {
 	// Validation
 	if (!criteria || !criteriaType) throw new Error('Both criteria and criteriaType are required parameters');
@@ -153,19 +153,13 @@ const removeByCriteria = async (criteria, criteriaType) => {
 		// Only ONE of these should be uncommented at a time
 
 		// Remove by user-agent
-		// await removeByCriteria('Mozilla/5.0', 'userAgent');
+		// await removeByCriteria('', 'userAgent');
 
 		// Remove by IP
-		// await removeByCriteria('192.168.1.1', 'ip');
+		// await removeByCriteria('', 'ip');
 
 		// Remove by endpoint
-		// await removeByCriteria('/api/endpoint', 'endpoint');
-
-		console.log('No criteria specified. Please edit the main() function to specify criteria.');
-		console.log('Example usage:');
-		console.log('  await removeByCriteria("value", "ip");');
-		console.log('  await removeByCriteria("value", "endpoint");');
-		console.log('  await removeByCriteria("value", "userAgent");');
+		// await removeByCriteria('', 'endpoint');
 	} catch (err) {
 		console.error('[FATAL]', err.message);
 		process.exit(1);
