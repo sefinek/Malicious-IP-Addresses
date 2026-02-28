@@ -72,16 +72,11 @@ const removeFromCsv = async (filePath, criteria, columnName) => {
 	}
 
 	// Extract unique IPs from matching records
-	const ipsToRemove = new Set(
-		matchingRecords.map(r => r.IP).filter(Boolean)
-	);
-
-	// Write remaining records back to CSV
+	const ipsToRemove = new Set(matchingRecords.map(r => r.IP).filter(Boolean));
 	if (remainingRecords.length > 0) {
 		const csvContent = stringify(remainingRecords, { header: true, columns: Object.keys(remainingRecords[0]) });
 		await fs.writeFile(filePath, csvContent, 'utf8');
 	} else {
-		// If no records left, create empty file with header
 		const header = Object.keys(records[0] || {}).join(',') + '\n';
 		await fs.writeFile(filePath, header, 'utf8');
 	}
@@ -109,14 +104,12 @@ const removeByCriteria = async (criteria, criteriaType) => {
 	console.log(`Removing entries where ${criteriaType} contains: "${criteria}"`);
 
 	try {
-		// Remove from CSV and get IPs to remove
 		const { removedCount, ipsToRemove } = await removeFromCsv(
 			FILES.csv,
 			criteria,
 			CRITERIA_COLUMNS[criteriaType]
 		);
 
-		// Remove corresponding IPs from TXT
 		let txtRemovedCount = 0;
 		if (ipsToRemove.size > 0) {
 			txtRemovedCount = await removeFromTxt(FILES.txt, ipsToRemove);
@@ -139,8 +132,8 @@ const removeByCriteria = async (criteria, criteriaType) => {
 			txtRemoved: txtRemovedCount,
 			ipsAffected: ipsToRemove.size,
 		};
-	} catch (error) {
-		throw new Error(`Failed to remove by criteria: ${error.message}`);
+	} catch (err) {
+		throw new Error(`Failed to remove by criteria: ${err.message}`);
 	}
 };
 
@@ -149,9 +142,6 @@ const removeByCriteria = async (criteria, criteriaType) => {
  */
 (async () => {
 	try {
-		// Example usage - modify these values as needed
-		// Only ONE of these should be uncommented at a time
-
 		// Remove by user-agent
 		// await removeByCriteria('', 'userAgent');
 
