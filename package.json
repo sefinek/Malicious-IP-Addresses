@@ -15,8 +15,6 @@
   "main": "scripts/update-list.js",
   "scripts": {
     "cleanup": "node scripts/cleanup.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
     "m": "ncu -u && npm install && npm update",
     "remove": "node removeByCriteria.js",
     "report": "node scripts/utils/generate-report.js",
