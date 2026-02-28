@@ -98,7 +98,7 @@ const removeByCriteria = async (criteria, criteriaType) => {
 	if (!criteria || !criteriaType) throw new Error('Both criteria and criteriaType are required parameters');
 
 	if (!CRITERIA_COLUMNS[criteriaType]) {
-		throw new Error(`Invalid criteriaType: ${criteriaType}. ` + `Valid options: ${Object.keys(CRITERIA_COLUMNS).join(', ')}`);
+		throw new Error(`Invalid criteriaType: ${criteriaType}, valid options: ${Object.keys(CRITERIA_COLUMNS).join(', ')}`);
 	}
 
 	console.log(`Removing entries where ${criteriaType} contains: "${criteria}"`);
