@@ -115,11 +115,7 @@ const cleanCsvFile = async filePath => {
 		const records = parse(content, { columns: true, skip_empty_lines: true });
 
 		// Process records and filter invalid/non-public IPs
-		const { counts } = processIpAddresses(
-			records.map(row => row.IP || ''),
-			false // Keep duplicates in CSV
-		);
-
+		const { counts } = processIpAddresses(records.map(row => row.IP || ''), false);
 		const cleanedRecords = records.filter(row => {
 			if (!row.IP) return false;
 			const type = classifyIp(row.IP);
