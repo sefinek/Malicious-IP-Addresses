@@ -69,11 +69,11 @@ const fetchLogs = async apiKey => {
 		return response.data.logs;
 	} catch (error) {
 		if (error.response) {
-			throw new Error(`API error (${error.response.status}): ${error.response.statusText}`);
+			throw new Error(`API error (${error.response.status}): ${error.response.statusText}`, { cause: error });
 		} else if (error.request) {
-			throw new Error('API error: No response received (network/timeout issue)');
+			throw new Error('API error: No response received (network/timeout issue)', { cause: error });
 		} else {
-			throw new Error(`API error: ${error.message}`);
+			throw new Error(`API error: ${error.message}`, { cause: error });
 		}
 	}
 };

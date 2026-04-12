@@ -93,7 +93,7 @@ const removeFromCsv = async (filePath, criteria, columnName) => {
  * @param {string} criteriaType - Type of criteria (endpoint, ip, userAgent)
  */
 
-const removeByCriteria = async (criteria, criteriaType) => {
+export const removeByCriteria = async (criteria, criteriaType) => {
 	// Validation
 	if (!criteria || !criteriaType) throw new Error('Both criteria and criteriaType are required parameters');
 
@@ -133,7 +133,7 @@ const removeByCriteria = async (criteria, criteriaType) => {
 			ipsAffected: ipsToRemove.size,
 		};
 	} catch (err) {
-		throw new Error(`Failed to remove by criteria: ${err.message}`);
+		throw new Error(`Failed to remove by criteria: ${err.message}`, { cause: err });
 	}
 };
 
@@ -146,7 +146,7 @@ const removeByCriteria = async (criteria, criteriaType) => {
 		// await removeByCriteria('', 'userAgent');
 
 		// Remove by IP
-		// await removeByCriteria('', 'ip');
+		await removeByCriteria('148.227.75.115', 'ip');
 
 		// Remove by endpoint
 		// await removeByCriteria('', 'endpoint');
