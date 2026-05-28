@@ -31,14 +31,10 @@ For blocking malicious traffic at the firewall level, consider using [sniffcat.c
 3. ✅ Bots generating artificial views *(especially useful if you use Google AdSense)*
 4. ✅ Malicious VPNs and proxies used for abuse
 
-> [!IMPORTANT]
-> Blocking IP addresses should be done carefully to avoid restricting legitimate traffic.  
-> Regular updates of the list are recommended.
-
 
 ## Cron
 Updates usually occur **every 2 hours**, but sometimes a delay of several days may occur.
-If you notice a longer lack of updates, you can report it via an [issue](https://github.com/sefinek/Malicious-IP-Addresses/issues).
+If you notice a longer lack of updates, you can report it via an [Issue](https://github.com/sefinek/Malicious-IP-Addresses/issues).
 The list is actively maintained and will not be abandoned.
 
 
