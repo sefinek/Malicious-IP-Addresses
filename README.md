@@ -7,13 +7,19 @@ If you find this repository helpful, consider leaving a star. Thank you, have a 
 📑 **For solid and effective Cloudflare WAF rules, check out [sefinek/Cloudflare-WAF-Expressions](https://github.com/sefinek/Cloudflare-WAF-Expressions).**
 
 > [!TIP]
-> Looking for a better alternative? Visit [sniffcat.com](https://sniffcat.com) — a new and efficient alternative to AbuseIPDB.
+> Looking for a better alternative? Visit [sniffcat.com](https://sniffcat.com) - a new and efficient alternative to AbuseIPDB.
 > The service provides detailed reports on malicious IP addresses and offers filtering by confidence score, countries, categories, and IP version.
 > Data can be downloaded in JSON or TXT format and is regularly updated based on submissions from our users. Results are generated automatically and available completely free of charge!  
 > You can find the documentation [here](https://sniffcat.com/documentation/api/blacklist).
 
 Do you have any questions or need assistance? Create [a new issue](https://github.com/sefinek/Malicious-IP-Addresses/issues) or join [my Discord server](https://discord.gg/S7NDzCzQTg).
 I also post important updates and announcements there. My email address: contact@sefinek.net 😉
+
+## Purpose
+The main purpose of this repository is threat identification, not direct IP blocking.
+The list contains IP addresses belonging to VPNs or proxies that have previously been involved in abuse activity and/or DDoS attacks.
+Entries are added continuously and are generally not removed, as the list serves as a long-term reputation blacklist.
+For blocking malicious traffic at the firewall level, consider using [sniffcat.com](https://sniffcat.com).
 
 ## What can this list block?
 1. ✅ DDoS attacks (L7 – HTTP flood)
@@ -22,8 +28,7 @@ I also post important updates and announcements there. My email address: contact
    - Connections from sources with confirmed malicious activity
    - Requests impersonating real browsers
 2. ✅ Malicious bots and crawlers
-3. ✅ Bots generating artificial views  
-   *(especially useful if you use Google AdSense)*
+3. ✅ Bots generating artificial views *(especially useful if you use Google AdSense)*
 4. ✅ Malicious VPNs and proxies used for abuse
 
 > [!IMPORTANT]
