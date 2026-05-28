@@ -22,7 +22,7 @@ Entries are added continuously and are generally not removed, as the list serves
 For blocking malicious traffic at the firewall level, consider using [sniffcat.com](https://sniffcat.com).
 
 ## What can this list block?
-1. ✅ DDoS attacks (L7 – HTTP flood)
+1. ✅ DDoS attacks (L7 - HTTP flood)
    - HTTP requests originating from known botnets
    - Traffic with unusual HTTP headers or suspicious endpoints
    - Connections from sources with confirmed malicious activity
