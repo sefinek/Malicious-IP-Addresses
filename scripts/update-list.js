@@ -79,6 +79,18 @@ const fetchLogs = async apiKey => {
 };
 
 /**
+ * Sanitizes a CSV field value to prevent formula injection attacks.
+ * @param {string} value - The field value to sanitize
+ * @returns {string} Sanitized value
+ */
+const sanitizeCsvField = value => {
+	if (typeof value === 'string' && /^[=+\-@|]/.test(value)) {
+		return `'${value}`;
+	}
+	return value;
+};
+
+/**
  * Processes logs and extracts new valid entries.
  * @param {Array} logs - Log entries from API
  * @param {Set<string>} existingIps - Set of existing IPs
@@ -133,8 +145,8 @@ const processLogs = (logs, existingIps, existingRayIds) => {
 				Date: new Date(timestamp).toISOString(),
 				RayID: rayId,
 				IP: ip,
-				Endpoint: endpoint || '',
-				'User-Agent': userAgent || '',
+				Endpoint: sanitizeCsvField(endpoint || ''),
+				'User-Agent': sanitizeCsvField(userAgent || ''),
 				'Action taken': action || '',
 				Country: country || '',
 			});
