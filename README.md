@@ -15,7 +15,7 @@ If you find this repository helpful, consider leaving a star. Thank you, have a 
 Do you have any questions or need assistance? Create [a new issue](https://github.com/sefinek/Malicious-IP-Addresses/issues) or join [my Discord server](https://discord.gg/S7NDzCzQTg).
 I also post important updates and announcements there. My email address: contact@sefinek.net 😉
 
-## Purpose
+## Purpose - IMPORTANT
 The main purpose of this repository is threat identification, not direct IP blocking.
 The list contains IP addresses belonging to VPNs or proxies that have previously been involved in abuse activity and/or DDoS attacks.
 Entries are added continuously and are generally not removed, as the list serves as a long-term reputation blacklist.
