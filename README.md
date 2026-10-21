@@ -30,7 +30,7 @@ I also post important updates and announcements there. My email address: contact
 
 
 ## Cron
-The list is usually updated **every 2 hours**, but delays of several days may occasionally occur.
+The update workflow is scheduled to run **five times a day**, at **00:00, 05:00, 10:00, 15:00, and 20:00 UTC**, but delays of several days may occasionally occur.
 If you notice that updates have been missing for a longer period, you can report it by creating a [new issue](https://github.com/sefinek/Malicious-IP-Addresses/issues).
 The list is actively maintained.
 
