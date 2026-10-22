@@ -3853,6 +3853,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-05-09T20:13:58.593Z,2026-05-09T18:00:17.188Z,9f92921e9c04239b,5.1.108.82,/tickets,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36",MANAGED_CHALLENGE,IQ
 2026-08-19T10:21:31.654Z,2026-08-19T08:00:23.861Z,a2d6ff73fc8e3286,5.1.108.248,/booru/artist/%E3%81%B1%E3%82%8B%E9%87%8E,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",MANAGED_CHALLENGE,IQ
 2026-07-01T15:52:04.121Z,2026-07-01T12:00:20.987Z,a145011f8f72e7bc,5.1.110.100,/gallery/foxgirl-swinging/foxgirl-swinging-denim-shorts,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36",MANAGED_CHALLENGE,IQ
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:14.377Z,a4e4a1edab200b6c,5.2.69.82,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",BLOCK,T1
 2024-09-26T10:04:43.088Z,2024-09-26T08:51:12.260Z,8c8ec563ea1b0b40,5.2.72.110,/,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/22.7.0 Yowser/2.5 Safari/537.36",MANAGED_CHALLENGE,T1
 2026-07-05T20:23:39.594Z,2026-07-05T14:00:11.167Z,a166c20d6dce5b9f,5.2.174.46,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Safari/605.1.15",MANAGED_CHALLENGE,RO
 2026-07-08T20:28:09.052Z,2026-07-08T18:00:20.329Z,a1809fb1acc1e3e4,5.2.225.141,/gallery,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_1) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/78.0.3904.70 Safari/537.36",MANAGED_CHALLENGE,RO
@@ -7971,6 +7972,8 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2025-01-05T12:02:33.035Z,2025-01-05T09:28:48.225Z,8fd25ed618553f42,13.203.154.127,/.git/config,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36",BLOCK,IN
 2025-07-25T20:03:49.789Z,2025-07-25T18:00:45.228Z,964d48b909473a1e,13.203.209.99,/index.php,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",MANAGED_CHALLENGE,IN
 2026-07-29T10:51:58.422Z,2026-07-29T08:00:12.335Z,a22a6d1e8ead0522,13.203.222.234,/.config/gcloud/application_default_credentials.json,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,IN
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:13.185Z,a4e4ca0bfbeb1432,13.204.69.168,/webmail/phpinfo.php,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,IN
+2026-10-22T09:46:50.251Z,2026-10-22T04:00:09.302Z,a4e551d23a64cc07,13.204.133.18,/actuator,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,BLOCK,IN
 2026-06-14T20:28:13.104Z,2026-06-14T14:00:16.535Z,a0b9d549f8ca4198,13.206.124.240,/webroot/index.php/_environment,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",MANAGED_CHALLENGE,IN
 2026-07-28T20:25:33.188Z,2026-07-28T18:00:16.013Z,a2253885bc19ab41,13.207.186.16,/media/system/js/core.js,Go-http-client/1.1,BLOCK,IN
 2025-08-10T05:06:12.579Z,2025-08-10T02:00:24.735Z,96cb416daa8652ae,13.208.181.44,/video/background-min.mp4,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.50 Safari/537.36",MANAGED_CHALLENGE,JP
@@ -30540,6 +30543,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-09-20T17:51:57.201Z,2026-09-20T14:00:06.115Z,a3e1479048ce8e0a,34.17.190.2,/preview/phpinfo.php,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,IT
 2026-10-20T22:52:59.821Z,2026-10-20T18:00:04.680Z,a4d9b4073bb6edca,34.17.191.192,/firebase-key.json,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,IT
 2026-09-14T10:15:21.478Z,2026-09-14T02:00:11.501Z,a3ab39d76d18edbf,34.17.193.248,/key.json,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,IT
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:16.464Z,a4e461fed8e8bc5a,34.17.194.181,/firebase-key.json,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,IT
 2026-05-11T00:34:02.174Z,2026-05-10T22:00:10.466Z,9f9bd78d99b6522a,34.17.195.222,/.git/config,Mozilla/5.0 (X11; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0 Iceweasel/19.0.2,BLOCK,IT
 2026-05-11T06:16:11.095Z,2026-05-11T04:00:18.159Z,9f9e17eb5aadb5aa,34.17.196.54,/.git/config,"Mozilla/5.0 (X11; U; Linux i686; en-gb) AppleWebKit/534.35 (KHTML, like Gecko) Chrome/11.0.696.65 Safari/534.35 Puffin/2.0.5603M",BLOCK,IT
 2026-05-01T06:02:20.050Z,2026-05-01T02:00:26.235Z,9f4b15b8ccdbed4c,34.17.201.237,/.git/config,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36",BLOCK,IT
@@ -31384,6 +31388,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-09-20T22:06:20.359Z,2026-09-20T18:00:11.129Z,a3e228762a1c0723,34.50.115.1,/firebase-key.json,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,ID
 2026-06-16T00:50:20.487Z,2026-06-15T20:00:24.390Z,a0c3f58e3a80ce6e,34.50.116.114,/server.key,"Mozilla/5.0 (Linux; Android 9; POCO F1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Mobile Safari/537.36",BLOCK,ID
 2026-06-15T12:01:49.310Z,2026-06-15T08:00:15.247Z,a0bff0f95f51600d,34.50.119.18,/mail/sendgrid.env,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36",MANAGED_CHALLENGE,ID
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:10.970Z,a4e5e1e39b19e1c1,34.50.121.129,/firebase-key.json,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,ID
 2026-05-17T15:22:55.734Z,2026-05-17T10:00:51.070Z,9fd1be5a9affcb9f,34.50.164.244,/webmail/phpinfo.php,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,US
 2026-06-14T10:57:51.080Z,2026-06-14T06:00:13.126Z,a0b6f5acea0c2f10,34.50.185.146,/www/.git/config,"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36 OPR/62.0.3331.117",BLOCK,US
 2025-07-21T05:08:50.149Z,2025-07-21T00:00:25.953Z,9625c07f99cf3464,34.51.73.72,/wp-admin/,Mozilla/5.0 (Windows NT 6.1; WOW64; rv:57.0)...Firefox/57.0,CHALLENGE,MX
@@ -31603,6 +31608,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-06-30T20:37:51.310Z,2026-06-30T14:00:14.532Z,a13d19bb6e92a700,34.61.115.210,/,Mozilla/5.0 (compatible; CMS-Checker/1.0; +https://example.com),MANAGED_CHALLENGE,US
 2025-06-21T15:03:10.760Z,2025-06-21T12:00:31.460Z,9532ab625ab368d7,34.61.117.44,/media/system/js/core.js,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36",MANAGED_CHALLENGE,US
 2025-08-05T00:14:56.434Z,2025-08-04T22:00:11.621Z,96a137c2a93f104e,34.61.143.244,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36",CHALLENGE,US
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:09.847Z,a4e5edc04db5e81a,34.61.149.123,/key.json,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,US
 2026-05-29T20:46:57.160Z,2026-05-29T16:00:14.468Z,a0362fb07eef61a1,34.61.159.118,/,Mozilla/5.0 (compatible; CMS-Checker/1.0; +https://example.com),MANAGED_CHALLENGE,US
 2025-12-25T20:03:48.100Z,2025-12-25T15:00:28.670Z,9b38964deb26eb56,34.61.161.6,/,Mozilla/5.0 (compatible; CMS-Checker/1.0; +https://example.com),BLOCK,US
 2026-08-08T10:24:27.752Z,2026-08-08T06:00:11.341Z,a27bc9da3a864b16,34.61.166.155,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",MANAGED_CHALLENGE,US
@@ -41763,6 +41769,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-07-28T15:45:06.601Z,2026-07-28T12:00:16.460Z,a2236457198aa3fd,2602:fa59:10:e70::1,/.git/config,Mozilla/5.0 (X11; Linux x86_64),BLOCK,US
 2026-06-19T16:00:33.191Z,2026-06-19T12:00:22.423Z,a0e1dd59cd0509f7,2602:fa59:10:e7f::1,/.git/config,Mozilla/5.0 (X11; Linux x86_64),BLOCK,US
 2026-07-17T05:52:40.300Z,2026-07-17T00:00:09.430Z,a1c4506c9febb82d,2602:fa59:10:10b5::1,/.git/config,Mozilla/5.0 (X11; Linux x86_64),BLOCK,US
+2026-10-22T09:46:50.251Z,2026-10-22T04:00:13.521Z,a4e4fb6d2f38b851,2602:fa59:13:1e9::1,/.git/config,Mozilla/5.0 (X11; Linux x86_64),BLOCK,US
 2026-07-25T15:22:43.500Z,2026-07-25T10:00:12.630Z,a209c2db1fd13ed0,2602:fa5d::30,/,"Mozilla/5.0 (Linux; U; Android 4.0.3; en-us) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36",BLOCK,TR
 2026-08-02T10:31:08.750Z,2026-08-02T08:00:25.864Z,a24b6eca4d4fde50,2602:fa5d::30,/,Mozilla/5.0 (Windows NT 5.1; rv:35.0) Gecko/20100101 Firefox/35.0,MANAGED_CHALLENGE,TR
 2026-09-23T09:40:47.506Z,2026-09-23T02:00:14.707Z,a3f554c34a19d0e0,2602:fa5d::30,/,Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; Touch; ASU2JS; rv:11.0) like Gecko,BLOCK,TR
@@ -47189,6 +47196,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-10-17T17:41:41.137Z,2026-10-17T14:00:27.344Z,a4bfcb56afea6262,2804:1b3:6147:1cc0:4c0e:13ba:6b54:18ac,/booru/search,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36",MANAGED_CHALLENGE,BR
 2026-10-17T17:41:41.136Z,2026-10-17T14:00:32.717Z,a4bfca3cdb3e64e1,2804:1b3:7055:2c2:50c4:5770:e386:5f58,/booru/search,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",MANAGED_CHALLENGE,BR
 2026-06-12T16:03:35.697Z,2026-06-12T14:00:09.577Z,a0a93a03ea72f199,2804:1b3:8c51:fb87:5955:21d8:ea88:ad27,/xmlrpc.php,"Mozilla/5.0 (Windows NT 6.2; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.0.0 Safari/537.36",MANAGED_CHALLENGE,BR
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:19.558Z,a4e4cf9b6a45f18e,2804:1b3:9102:cf46:906a:12b5:dd4b:9167,/booru/search,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,BR
 2026-10-17T17:41:41.136Z,2026-10-17T12:00:10.988Z,a4bf0fee5f64cb55,2804:1b3:9442:b34f:bce1:1b00:9042:55f9,/booru/search,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",MANAGED_CHALLENGE,BR
 2026-10-20T09:45:24.348Z,2026-10-20T02:00:17.468Z,a4d3d7a8a9b8c585,2804:1b3:a0c0:8899:90d5:a9d8:e1fc:b3db,/booru/feeds/tag/long-hair,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",BLOCK,BR
 2026-10-17T17:41:41.149Z,2026-10-17T12:00:06.331Z,a4bf1d0d7a684359,2804:1b3:ab03:163:d9dd:b75c:3532:6530,/booru/search,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0",MANAGED_CHALLENGE,BR
@@ -47442,6 +47450,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-10-17T17:41:41.156Z,2026-10-17T14:00:26.713Z,a4bfcb7c19b69414,2804:5b30:2c3c:4d00:595d:e710:56d8:2b98,/booru/search,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",MANAGED_CHALLENGE,BR
 2026-08-28T08:33:03.825Z,2026-08-28T02:01:45.634Z,a31f4646e8c7f1fc,2804:5b5c:e01d:2d00:c73:5f1b:b651:57f8,/dbm.php,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0,MANAGED_CHALLENGE,BR
 2025-12-27T20:03:46.273Z,2025-12-27T15:00:56.833Z,9b491cc9b9826294,2804:5bdc:703f:3f00:29d4:8ef7:4c42:545b,/ayomi/commands,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",MANAGED_CHALLENGE,BR
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:21.079Z,a4e46d4caef4f252,2804:5c84:81d7:4400:6822:8662:7ec3:393a,/booru/artist/PM,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",BLOCK,BR
 2026-01-01T00:16:52.526Z,2025-12-31T19:00:10.549Z,9b6bef6c693d0cad,2804:5d2c:10:1b2c:1625:7417:bdbd:ee4d,/.well-known/assetlinks.json,okhttp/4.12.0,BLOCK,BR
 2026-01-01T05:09:05.694Z,2025-12-31T23:00:08.792Z,9b6d02bd5e55f909,2804:5d2c:10:1b2c:64c2:73f3:e83a:e541,/.well-known/assetlinks.json,okhttp/4.12.0,BLOCK,BR
 2025-12-31T20:03:36.482Z,2025-12-31T17:00:24.462Z,9b6ab8a80d084d92,2804:5d2c:10:1b2c:86d5:7c9a:c598:288e,/.well-known/assetlinks.json,okhttp/4.12.0,BLOCK,BR
@@ -60848,6 +60857,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-08-24T15:32:29.837Z,2026-08-24T12:01:40.463Z,a301ccae9e1de89c,43.164.131.148,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",MANAGED_CHALLENGE,KR
 2026-10-08T20:26:33.527Z,2026-10-08T14:00:08.611Z,a47525ddfdb10c91,43.164.131.148,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",MANAGED_CHALLENGE,KR
 2026-10-14T19:06:47.805Z,2026-10-14T14:00:14.834Z,a4a71a9a9bd9ea07,43.164.131.148,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",BLOCK,KR
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:11.968Z,a4e5cd3a5a9e0847,43.164.131.148,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",BLOCK,KR
 2026-06-09T06:22:56.497Z,2026-06-09T04:00:16.866Z,a08d24e7fddb5b64,43.164.133.138,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",MANAGED_CHALLENGE,KR
 2026-06-14T10:57:51.080Z,2026-06-14T08:00:21.341Z,a0b79e580ebaea2c,43.164.133.138,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",MANAGED_CHALLENGE,KR
 2026-07-30T20:25:37.629Z,2026-07-30T18:00:18.836Z,a235ad947860ea21,43.164.133.138,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",MANAGED_CHALLENGE,KR
@@ -75509,6 +75519,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-10-03T10:09:39.882Z,2026-10-03T04:00:09.086Z,a448d9dc4941cd83,45.138.12.6,/.git/config,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",BLOCK,PL
 2026-10-15T09:33:17.397Z,2026-10-15T06:00:20.530Z,a4abf4dd594e1207,45.138.12.6,/.hg/requires,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",BLOCK,PL
 2026-10-18T13:42:59.904Z,2026-10-18T08:00:14.172Z,a4c573f5efb7b2ae,45.138.12.6,/.hg/dirstate,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",BLOCK,PL
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:07.651Z,a4e5fd935fac8b93,45.138.12.6,/.svn/wc.db,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",BLOCK,PL
 2026-09-17T14:35:02.263Z,2026-09-17T10:00:21.620Z,a3c6ff918f54bfd5,45.138.12.9,/.svn/wc.db,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",BLOCK,NL
 2026-09-21T10:20:45.528Z,2026-09-21T02:00:09.018Z,a3e52903c82cd2c5,45.138.12.10,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,NL
 2026-10-01T11:17:44.536Z,2026-10-01T08:00:18.782Z,a4394d749962b8f5,45.138.12.10,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,PL
@@ -79687,6 +79698,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-05-11T06:16:11.095Z,2026-05-11T00:00:09.147Z,9f9c8dd2892b74a8,45.195.13.21,/tickets,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/88.0.4324.146 Safari/537.36",MANAGED_CHALLENGE,VE
 2025-12-10T10:04:06.829Z,2025-12-10T07:00:37.230Z,9aba33eeeb2be2f7,45.195.29.2,/xmlrpc.php,"Mozilla/5.0 (Windows NT 10.0; x86) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.0.0 Safari/537.36",MANAGED_CHALLENGE,PH
 2026-02-18T00:19:36.446Z,2026-02-17T19:00:16.697Z,9cf7797d9b342d71,45.195.99.254,/genshin-stella-mod,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,RU
+2026-10-22T09:46:50.251Z,2026-10-22T04:00:18.826Z,a4e55e419d1ace26,45.195.159.62,/actuator,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36,BLOCK,IN
 2025-08-15T15:03:41.177Z,2025-08-15T10:00:43.809Z,96f729b1aeefa062,45.195.183.173,/genshin-stella-mod,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,DE
 2025-08-15T10:03:34.786Z,2025-08-15T08:00:34.706Z,96f682594adbdcad,45.195.185.86,/,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 OPR/89.0.4447.51",MANAGED_CHALLENGE,DE
 2026-04-08T10:22:39.774Z,2026-04-08T04:00:46.466Z,9e8df5eeac77b5b9,45.195.194.10,/documentation,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36",MANAGED_CHALLENGE,PK
@@ -92140,6 +92152,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-09-18T02:43:34.627Z,2026-09-17T22:00:04.319Z,a3cb584b0a650519,51.79.192.65,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",MANAGED_CHALLENGE,SG
 2026-09-28T03:05:26.790Z,2026-09-28T00:00:05.600Z,a41e084aeef50548,51.79.192.65,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",MANAGED_CHALLENGE,SG
 2026-10-10T19:05:24.134Z,2026-10-10T12:00:07.921Z,a485297caa4f2fbd,51.79.192.65,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",MANAGED_CHALLENGE,SG
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:16.914Z,a4e4415c5a13eb9d,51.79.192.65,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,SG
 2026-07-27T15:51:27.761Z,2026-07-27T10:00:25.758Z,a21a59e65adbfd2e,51.79.208.246,//xmlrpc.php,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",MANAGED_CHALLENGE,SG
 2025-04-16T04:01:49.542Z,2025-04-16T00:00:53.044Z,930e91b01d8a40c5,51.79.214.85,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 OPR/89.0.4447.51",MANAGED_CHALLENGE,SG
 2025-04-26T12:02:11.722Z,2025-04-26T10:01:23.415Z,9364a7c6e8cc602e,51.79.214.85,/,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,SG
@@ -108137,6 +108150,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-10-09T23:50:30.669Z,2026-10-09T18:00:16.528Z,a47ed2bdcc835033,77.90.185.5,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,LT
 2026-10-14T14:49:15.859Z,2026-10-14T10:00:17.480Z,a4a578473af28bd9,77.90.185.5,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",BLOCK,LT
 2026-10-17T21:55:53.920Z,2026-10-17T18:00:04.988Z,a4c115c0883d689e,77.90.185.5,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,LT
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:23.838Z,a4e4d7708f883bc4,77.90.185.5,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",BLOCK,LT
 2025-12-25T05:05:53.060Z,2025-12-25T01:00:17.581Z,9b3427b77bc6c06f,77.90.185.10,/wp-admin/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Safari/605.1.15",MANAGED_CHALLENGE,LT
 2025-12-21T05:04:44.702Z,2025-12-21T01:00:18.637Z,9b1348ae3ed4c931,77.90.185.12,/wp-admin/,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",MANAGED_CHALLENGE,LT
 2026-03-26T00:22:06.572Z,2026-03-25T19:00:44.307Z,9e1f88a558ecc4a2,77.90.185.40,/,Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/118 Safari/537.36,MANAGED_CHALLENGE,LT
@@ -109827,6 +109841,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-08-23T10:16:38.536Z,2026-08-23T06:00:18.854Z,a2f7887648362c5c,79.177.151.100,/blocklist-generator,"Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.2191.147 Safari/537.36",BLOCK,IL
 2026-05-17T20:16:44.161Z,2026-05-17T16:00:25.847Z,9fd39a09fd0436f8,79.177.153.106,/documentation,"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36",MANAGED_CHALLENGE,IL
 2026-05-22T20:32:47.091Z,2026-05-22T18:00:21.860Z,9ffd0f1d0dc0be2e,79.177.153.151,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36",MANAGED_CHALLENGE,IL
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:23.352Z,a4e44f749c002c5c,79.177.157.55,/booru/feeds/tag/halloween,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",BLOCK,IL
 2026-10-17T17:41:41.137Z,2026-10-17T12:00:21.456Z,a4befa4fcd3e75ff,79.177.157.121,/booru/search,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",MANAGED_CHALLENGE,IL
 2026-04-15T20:17:46.786Z,2026-04-15T14:01:05.108Z,9ecb02982a5f4afa,79.177.157.234,/booru/artist/%E9%9B%A8%E7%BE%8E%E3%81%99%E3%81%9A%E3%82%81,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Mobile Safari/537.36",MANAGED_CHALLENGE,IL
 2026-05-31T00:39:41.827Z,2026-05-30T20:00:10.249Z,a04032662ba8be2e,79.177.159.50,/,"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36",MANAGED_CHALLENGE,IL
@@ -111962,6 +111977,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-09-21T10:20:45.529Z,2026-09-21T06:00:18.731Z,a3e6a4b20e1c33c8,82.34.221.31,/booru/artist/%E3%82%82%E3%81%84%E3%82%82%E3%81%84@,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36",MANAGED_CHALLENGE,GB
 2026-07-02T00:39:30.324Z,2026-07-01T20:00:35.027Z,a147a9df1b45b3d2,82.34.247.102,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",MANAGED_CHALLENGE,GB
 2026-06-25T00:40:29.386Z,2026-06-24T20:00:23.497Z,a10decbaee4d6b4e,82.35.89.22,/booru/artist/%E9%9B%AA%E9%9F%B3%E3%81%AD%E3%82%8B%E2%9D%84%EF%B8%8F,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36",MANAGED_CHALLENGE,GB
+2026-10-22T09:46:50.250Z,2026-10-22T04:00:15.811Z,a4e536f60ed64ae0,82.35.101.117,/booru/artist/%E3%82%82%E3%81%A4%E7%85%AE,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,GB
 2025-07-16T20:03:41.045Z,2025-07-16T18:00:32.429Z,96034149cc3d46d0,82.35.109.171,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",MANAGED_CHALLENGE,GB
 2026-01-16T15:04:58.972Z,2026-01-16T13:00:20.160Z,9bed4fb09f56f52d,82.36.88.185,/genshin-stella-mod,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,GB
 2026-05-07T10:44:16.793Z,2026-05-07T06:00:24.820Z,9f7d9e726a5bb3ab,82.36.182.173,/subscription/controller/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",MANAGED_CHALLENGE,GB
@@ -120049,6 +120065,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-06-10T16:16:43.422Z,2026-06-10T10:00:10.872Z,a097278d3dafcf06,87.236.176.129,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
 2026-09-10T17:59:22.873Z,2026-09-10T14:00:08.476Z,a38ebd2cff4f775c,87.236.176.129,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
 2026-09-20T02:54:50.550Z,2026-09-19T22:00:10.487Z,a3db6d29dd0cc51c,87.236.176.129,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:17.241Z,a4e43d8cded07876,87.236.176.129,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
 2025-09-07T00:14:06.126Z,2025-09-06T22:00:26.128Z,97b0ff1ac927b36d,87.236.176.130,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
 2025-11-16T15:03:22.179Z,2025-11-16T13:00:38.957Z,99f6d4287cec0747,87.236.176.130,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
 2026-02-25T00:20:37.772Z,2026-02-24T19:00:32.776Z,9d30dcf00c3088d3,87.236.176.130,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
@@ -120590,6 +120607,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2025-11-30T05:03:50.668Z,2025-11-30T01:00:43.181Z,9a65d33ec818f76d,88.30.0.185,/genshin-stella-mod,"Mozilla/5.0 (Macintosh; Intel Mac OS X 12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 OPR/89.0.4447.51",MANAGED_CHALLENGE,ES
 2025-07-16T20:03:41.045Z,2025-07-16T18:00:30.780Z,960341f20b6b033d,88.30.93.66,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",MANAGED_CHALLENGE,ES
 2026-10-17T13:24:20.979Z,2026-10-17T10:10:38.694Z,a4be624c5873cadd,88.71.157.94,/booru/search,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",MANAGED_CHALLENGE,DE
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:21.195Z,a4e608f33de33c43,88.71.174.1,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,DE
 2024-11-13T10:04:50.693Z,2024-11-11T05:28:26.362Z,8e0bbd5c2ab895fd,88.80.20.86,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5042.0 Safari/537.36",MANAGED_CHALLENGE,T1
 2025-01-12T16:01:45.670Z,2025-01-12T13:48:23.622Z,900d96e3bdd8ec65,88.80.20.155,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,SE
 2025-01-13T00:06:17.123Z,2025-01-12T21:56:29.146Z,90104a346a91f11f,88.80.21.93,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,SE
@@ -120828,6 +120846,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-09-05T13:11:21.838Z,2026-09-05T08:00:12.831Z,a3630ea12fa55e3f,88.167.152.198,/genshin-stella-mod/stats,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",MANAGED_CHALLENGE,FR
 2025-07-16T20:03:41.046Z,2025-07-16T18:00:32.065Z,9603415b9800d886,88.168.28.125,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",MANAGED_CHALLENGE,FR
 2026-07-23T20:22:53.996Z,2026-07-23T14:00:19.037Z,a1fb026a68833cd5,88.169.205.238,/,"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.7973.1026 Mobile Safari/537.36",BLOCK,FR
+2026-10-22T09:46:50.250Z,2026-10-22T04:00:16.390Z,a4e5223eee5d2a61,88.169.214.165,/booru/artist/%E5%AD%A4%E8%91%AC%E5%8D%97%E9%A2%A8,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",BLOCK,FR
 2024-10-03T16:04:52.119Z,2024-10-03T14:17:29.889Z,8ccabe2b6984153d,88.170.152.104,/genshin-stella-mod,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:114.0) Gecko/20100101 Firefox/114.0,CHALLENGE,FR
 2025-03-31T08:02:04.873Z,2025-03-31T06:00:17.447Z,928d8bd77d70d666,88.170.152.104,/genshin-stella-mod,"Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Vivaldi/5.3.2679.68",MANAGED_CHALLENGE,FR
 2025-04-03T08:02:05.088Z,2025-04-03T06:00:24.190Z,92a608fd9dd7b868,88.170.152.104,/,Mozilla/5.0 (Macintosh; Intel Mac OS X 12.5; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,FR
@@ -126593,6 +126612,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-02-07T00:18:17.821Z,2026-02-06T19:00:11.117Z,9c9c5a04de990a33,92.124.154.154,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,RU
 2026-08-28T08:33:03.820Z,2026-08-28T02:02:26.082Z,a31f41e38c88b79a,92.124.163.171,/sql/adminer/adminer.php,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",MANAGED_CHALLENGE,RU
 2025-07-16T20:03:41.046Z,2025-07-16T18:00:29.392Z,96034264ce64f116,92.127.238.66,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",MANAGED_CHALLENGE,RU
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:22.388Z,a4e4632e8cb17ad7,92.129.240.118,/booru/feeds/tag/saiba-momoi,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,FR
 2026-06-18T06:34:37.599Z,2026-06-18T00:00:06.517Z,a0d5cb6098956cb2,92.133.106.66,/genshin-stella-mod/docs,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.155 Safari/537.36",MANAGED_CHALLENGE,FR
 2026-04-10T00:22:49.022Z,2026-04-09T20:00:11.422Z,9e9bf415d9666efd,92.134.207.148,/login,"Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.6941.1761 Mobile Safari/537.36",MANAGED_CHALLENGE,FR
 2026-08-03T20:30:30.075Z,2026-08-03T14:00:21.685Z,a25574ad28a9d0a4,92.134.244.244,/booru/artist/%E3%81%84%E3%81%8B%E3%82%8A,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/537.36 (KHTML, like Gecko, Mediapartners-Google) Chrome/83.0.4103.118 Safari/537.36",MANAGED_CHALLENGE,FR
@@ -129989,6 +130009,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-09-30T03:32:33.638Z,2026-09-30T00:00:03.839Z,a42e4a660b7d060b,95.31.168.194,/,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0 Safari/537.36 NWSIP-Stage1",BLOCK,RU
 2026-10-15T18:49:17.482Z,2026-10-15T14:00:39.675Z,a4aea85afac4971e,95.31.168.194,/,python-requests/2.32.3,BLOCK,RU
 2025-04-10T04:01:47.145Z,2025-04-10T00:01:04.365Z,92dd5568ab05ecc6,95.32.84.64,/backup.zip,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.184 Safari/537.36",BLOCK,RU
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:20.069Z,a4e62b74bf1c9a94,95.32.85.26,/booru,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,RU
 2026-09-19T02:42:58.175Z,2026-09-18T22:00:15.612Z,a3d2f85a7a638687,95.32.108.34,/booru/artist/Kurone,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",MANAGED_CHALLENGE,RU
 2025-07-12T20:03:17.330Z,2025-07-12T14:00:24.106Z,95e0d4cfbc28e957,95.32.207.241,/genshin-stella-mod,"Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Vivaldi/5.3.2679.68",MANAGED_CHALLENGE,RU
 2025-12-06T20:03:46.849Z,2025-12-06T17:00:31.426Z,9a9d2417cd7abb02,95.32.210.119,/,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.714 YaBrowser/23.11.1.714 Yowser/2.5 Safari/537.36",MANAGED_CHALLENGE,RU
@@ -132871,6 +132892,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-06-04T06:32:23.563Z,2026-06-04T00:00:08.725Z,a06232ddf87384d9,101.32.51.54,/ip,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,HK
 2026-07-10T00:33:52.217Z,2026-07-09T20:00:06.658Z,a189e0416b95855f,101.32.51.54,/ip,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,HK
 2026-09-03T22:10:01.471Z,2026-09-03T20:00:18.481Z,a35728abecc11483,101.32.51.54,/ip,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,HK
+2026-10-22T09:46:50.251Z,2026-10-22T04:00:14.206Z,a4e56dd62c913e37,101.32.51.96,/,Go-http-client/1.1,BLOCK,HK
 2025-07-01T15:03:38.179Z,2025-07-01T12:00:30.498Z,9585aa068d9806fa,101.32.52.164,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",MANAGED_CHALLENGE,HK
 2025-09-10T10:03:47.148Z,2025-09-10T08:00:23.242Z,97cd1499bc0d045f,101.32.52.164,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",MANAGED_CHALLENGE,HK
 2025-12-22T15:03:47.096Z,2025-12-22T09:00:30.615Z,9b1de8dbdddc1c41,101.32.52.164,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1",MANAGED_CHALLENGE,HK
@@ -145060,6 +145082,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-09-16T09:37:35.292Z,2026-09-16T06:00:20.539Z,a3bcf73c8aedd083,104.28.254.47,/config.yml,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36",BLOCK,SG
 2025-06-20T05:03:50.506Z,2025-06-20T00:00:07.913Z,95266f864820a02d,104.28.254.77,/,Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,VN
 2025-06-28T10:03:19.669Z,2025-06-28T08:00:38.709Z,956af8ce28d3a090,104.28.254.77,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,VN
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:22.756Z,a4e5bfdf8a1922d7,104.30.160.203,/documentation/categories,Mozilla/5.0,BLOCK,US
 2026-09-07T22:26:40.211Z,2026-09-07T18:00:12.889Z,a3770a8d4ffd9692,104.30.167.164,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36 (compatible; +https://developers.cloudflare.com/security-center/)",MANAGED_CHALLENGE,US
 2026-09-10T22:11:01.611Z,2026-09-10T16:00:32.667Z,a38f70e45d650d2e,104.30.167.164,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36 (compatible; +https://developers.cloudflare.com/security-center/)",MANAGED_CHALLENGE,US
 2026-09-14T19:42:10.503Z,2026-09-14T14:00:37.179Z,a3ad5dbcfcb8a366,104.30.167.164,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36 (compatible; +https://developers.cloudflare.com/security-center/)",BLOCK,US
@@ -164621,6 +164644,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-02-08T05:30:02.913Z,2026-02-08T03:00:24.767Z,9ca763b6782ff5d9,110.177.183.245,/,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
 2026-07-26T20:20:48.116Z,2026-07-26T18:00:10.825Z,a214cc9e9a430ea0,110.179.80.12,/ipfs/bafkreicyqcbhpicbos7ev4mrxofwqx6hvvge7pahpta6xuspr44crai5by,"Mozilla/5.062334851 Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",BLOCK,CN
 2026-07-28T00:27:48.270Z,2026-07-27T20:00:41.136Z,a21b2f2d4af39fd0,110.179.80.12,/,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
+2026-10-22T09:46:50.250Z,2026-10-22T02:00:14.978Z,a4e4a0158d274f72,110.179.80.12,/dns-query,Go-http-client/1.1,BLOCK,CN
 2026-10-18T09:16:36.842Z,2026-10-18T06:00:32.936Z,a4c516113f692d31,110.179.80.17,/ipfs/bafkreicyqcbhpicbos7ev4mrxofwqx6hvvge7pahpta6xuspr44crai5by,"Mozilla/5.066704189 Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36",BLOCK,CN
 2026-09-17T02:56:55.480Z,2026-09-17T00:00:28.702Z,a3c3916678228709,110.179.80.28,/dns-query,Go-http-client/1.1,BLOCK,CN
 2026-10-14T14:49:15.861Z,2026-10-14T12:00:27.678Z,a4a668b579a6413a,110.179.80.30,/main.c6d13be3ea6fc9cb.js,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
@@ -165298,6 +165322,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-07-23T05:59:44.401Z,2026-07-23T00:00:05.545Z,a1f634f19b6390cc,111.225.214.168,/,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-10-06T19:56:23.006Z,2026-10-06T14:00:12.752Z,a464ad789f6006dc,111.225.214.169,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-10-05T21:46:11.347Z,2026-10-05T12:00:17.674Z,a45ba5144d171c0a,111.225.214.170,/booru/artist/%E7%BF%BC%40Tsubasachyan,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:18.841Z,a4e4d3d0aaddd0d5,111.225.214.170,/booru/feeds/tag/valentine,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-08-31T11:17:11.994Z,2026-08-31T08:00:26.174Z,a339dcdb1d245392,111.225.214.171,/booru,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-10-03T18:29:18.097Z,2026-10-03T10:00:17.179Z,a44afeb99b5a1886,111.225.214.171,/booru/artist/%E3%81%84%E3%81%9A%E3%81%BF%E3%81%AA%E3%81%AA%E3%81%9B,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-08-31T20:34:42.241Z,2026-08-31T10:00:11.792Z,a33b1409efef6d94,111.225.214.172,/download,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
@@ -165333,6 +165358,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-10-18T13:42:59.903Z,2026-10-18T10:00:36.252Z,a4c6558298432fc1,111.225.214.191,/booru/feeds/tag/amamineko-cafe,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-07-29T10:51:58.422Z,2026-07-29T06:00:23.125Z,a2294aa4ad2c95ab,111.225.214.192,/,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-08-29T18:07:25.896Z,2026-08-29T16:00:35.536Z,a32c2f321c046684,111.225.214.192,/report-bug,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:15.857Z,a4e46cb618f2a6a3,111.225.214.192,/,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-07-13T20:26:13.363Z,2026-07-13T14:00:09.351Z,a1a88e8d6ecaf7ea,111.225.214.194,/,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-09-11T09:18:18.660Z,2026-09-11T06:00:12.389Z,a3944c50194edf30,111.225.214.194,/,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
 2026-08-25T15:36:09.077Z,2026-08-25T10:01:22.541Z,a30705ab2919db48,111.225.214.195,/,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36",BLOCK,CN
@@ -176121,6 +176147,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2025-08-29T05:03:28.058Z,2025-08-29T00:00:10.616Z,9767c27e6fe61717,123.160.223.75,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",MANAGED_CHALLENGE,CN
 2025-09-05T10:03:43.457Z,2025-09-05T06:00:31.058Z,97a2d3753bc586dc,123.160.223.75,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36",MANAGED_CHALLENGE,CN
 2026-10-08T20:26:33.527Z,2026-10-08T18:00:18.074Z,a476db203ec7cd20,123.160.232.5,/fzh,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:19.667Z,a4e62bd44ae1ae62,123.160.232.51,/ipfs/bafkreicyqcbhpicbos7ev4mrxofwqx6hvvge7pahpta6xuspr44crai5by,"Mozilla/5.0101097241 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36",BLOCK,CN
 2026-01-15T05:07:21.711Z,2026-01-15T01:00:21.114Z,9be0d1cb9d1bfba5,123.160.232.80,/fwc,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
 2026-01-22T10:05:55.614Z,2026-01-22T05:00:26.307Z,9c1c3716dd5bf5de,123.160.232.88,/,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
 2026-09-09T18:14:30.253Z,2026-09-09T16:01:16.158Z,a3861daacb871908,123.160.232.117,/,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
@@ -180048,6 +180075,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-07-12T20:16:09.963Z,2026-07-12T18:00:15.758Z,a1a1c54c38de23f9,131.0.66.16,/gallery/nina/neko-girl-lollipop-black-hoodie,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36",MANAGED_CHALLENGE,BR
 2026-07-02T00:39:30.325Z,2026-07-01T22:00:07.286Z,a14862d4d975c4b5,131.0.89.129,/credits,"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36",MANAGED_CHALLENGE,BR
 2025-09-01T00:15:55.588Z,2025-08-31T22:00:14.517Z,977fb0d75ec86262,131.0.151.120,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,BR
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:22.658Z,a4e450d738aa6267,131.0.196.230,/booru/search,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,BO
 2026-08-09T10:26:51.109Z,2026-08-09T04:00:16.824Z,a283bd2ebe97b7f1,131.0.197.14,/booru/artist/%E4%B8%89NyaNya%E4%B8%89,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",MANAGED_CHALLENGE,BO
 2026-08-07T00:50:52.010Z,2026-08-06T14:00:26.262Z,a26e56966bae01aa,131.0.197.120,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",MANAGED_CHALLENGE,BO
 2026-06-20T15:33:19.554Z,2026-06-20T12:00:08.403Z,a0ea2ee7afa04c86,131.0.197.209,/profiles,"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/84.0.4147.105 Safari/537.36",MANAGED_CHALLENGE,BO
@@ -184810,6 +184838,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-09-22T09:35:06.575Z,2026-09-22T04:00:23.133Z,a3eddbe6e9cbb57d,136.64.32.244,/.git/config,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",BLOCK,US
 2026-08-28T08:33:03.819Z,2026-08-27T20:00:08.027Z,a31d7167c877c022,136.64.59.135,/.env/,crusader-worker/1.0,BLOCK,US
 2026-10-03T18:29:18.098Z,2026-10-03T16:00:17.671Z,a44ce2c4a9a00cda,136.64.60.66,/,Mozilla/5.0 (compatible; CMS-Checker/1.0; +https://example.com),MANAGED_CHALLENGE,US
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:15.446Z,a4e47728390f97b4,136.64.87.171,/,Python/3.10 aiohttp/3.14.5,BLOCK,US
 2026-07-09T16:00:00.471Z,2026-07-09T14:00:08.062Z,a1879ff54a7ee826,136.64.98.162,/,Mozilla/5.0 (compatible; CMS-Checker/1.0; +https://example.com),MANAGED_CHALLENGE,US
 2026-09-10T22:11:01.611Z,2026-09-10T16:00:35.678Z,a38f24c06bd70f01,136.64.120.175,/.git/config,,BLOCK,US
 2026-09-11T02:32:04.437Z,2026-09-11T00:11:38.964Z,a391c3768d936070,136.64.137.60,/.git/config,,BLOCK,US
@@ -188101,6 +188130,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2025-08-09T15:03:10.642Z,2025-08-09T12:00:06.423Z,96c6eb6aa867daac,138.99.38.76,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36",CHALLENGE,US
 2026-06-20T10:47:53.129Z,2026-06-20T06:00:25.058Z,a0e7f66a8ba0f1c1,138.99.54.105,/gallery/neko-girl-white-dress-beach,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4450.0 Safari/537.36",MANAGED_CHALLENGE,BR
 2025-12-19T00:15:12.965Z,2025-12-18T21:00:18.585Z,9b0148283aa4bd9e,138.99.75.167,/npm/moecounter.js/demo,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/87.0.4280.60 Safari/537.36",MANAGED_CHALLENGE,BR
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:20.561Z,a4e471f5483f1214,138.99.150.75,/booru/artist/%E9%95%B7%E5%8F%8B%E3%81%8B%E3%81%BC%E3%81%A1%E3%82%83,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,MX
 2026-07-21T00:28:36.061Z,2026-07-20T22:00:24.973Z,a1e4a27c7a4200c0,138.99.165.241,/gallery/peace-signs/nekomimi-girls-star-accessories-night,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/87.0.4280.141 Safari/537.36",MANAGED_CHALLENGE,BR
 2026-04-26T05:49:58.926Z,2026-04-26T02:00:34.422Z,9f2192d88804dd2e,138.99.220.203,/booru/artist/%E7%A5%9E%E4%BB%A3%E3%81%B4%E3%82%88,"Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.9993.1193 Mobile Safari/537.36",MANAGED_CHALLENGE,AR
 2025-12-11T20:04:05.729Z,2025-12-11T17:01:06.414Z,9ac65008dc82ec69,138.113.88.136,/about,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",MANAGED_CHALLENGE,TH
@@ -190540,6 +190570,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-07-20T06:02:21.483Z,2026-07-20T00:00:34.840Z,a1dd011b88bc8c16,139.170.72.172,/aaabbbccc,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
 2026-10-03T03:21:52.701Z,2026-10-02T22:00:06.982Z,a44678f80ff5e538,139.170.72.172,/,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
 2026-10-04T18:29:53.430Z,2026-10-04T16:00:12.459Z,a454e16b68804d90,139.170.72.177,/ipfs/bafkreicyqcbhpicbos7ev4mrxofwqx6hvvge7pahpta6xuspr44crai5by,"Mozilla/5.084743666 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134",BLOCK,CN
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:21.527Z,a4e5eb3549fe55f7,139.170.72.179,/ipfs/bafkreicyqcbhpicbos7ev4mrxofwqx6hvvge7pahpta6xuspr44crai5by,"Mozilla/5.066704189 Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36",BLOCK,CN
 2026-09-22T22:37:53.018Z,2026-09-22T20:00:14.383Z,a3f3e38c4ec8c12c,139.170.72.181,/ipfs/bafkreicyqcbhpicbos7ev4mrxofwqx6hvvge7pahpta6xuspr44crai5by,"Mozilla/5.066704189 Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36",BLOCK,CN
 2026-10-03T03:21:52.702Z,2026-10-03T00:00:03.325Z,a44734ebca399b18,139.170.72.191,/officialsite,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
 2026-09-09T18:14:30.251Z,2026-09-09T16:01:19.753Z,a3861b470d42cb91,139.170.72.220,/fzh,Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0,MANAGED_CHALLENGE,CN
@@ -194234,6 +194265,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-05-01T10:30:39.129Z,2026-05-01T06:00:20.559Z,9f4bf2c95871bafa,142.154.3.3,/,"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2849.1725 Mobile Safari/537.36",BLOCK,SA
 2025-05-20T00:06:05.642Z,2025-05-19T22:00:20.552Z,9426dcd15b34ed1e,142.154.126.127,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36",BLOCK,SA
 2026-10-15T14:36:04.946Z,2026-10-15T10:00:08.540Z,a4ade5266e2288d9,142.161.72.29,/sitemap_index.xml,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",BLOCK,CA
+2026-10-22T09:46:50.250Z,2026-10-22T02:00:23.102Z,a4e44fafcc4d896d,142.162.243.27,/booru/feeds/tag/halloween,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",BLOCK,CA
 2024-10-02T18:05:48.690Z,2024-10-02T15:47:14.618Z,8cc2b0a96d3d2d36,142.165.165.246,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Vivaldi/5.3.2679.68",CHALLENGE,CA
 2024-12-11T18:02:30.118Z,2024-12-11T17:13:44.594Z,8f06f73fb9bb7285,142.167.30.6,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 OPR/89.0.4447.51",MANAGED_CHALLENGE,CA
 2026-10-17T17:41:41.146Z,2026-10-17T12:00:15.207Z,a4bf05d688cb1dcc,142.167.86.168,/booru/search,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",MANAGED_CHALLENGE,CA
@@ -204366,6 +204398,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-01-28T20:05:31.829Z,2026-01-28T15:01:43.203Z,9c50c6c53ab3ef15,151.225.135.186,/genshin-stella-mod,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Safari/605.1.15",MANAGED_CHALLENGE,GB
 2025-04-29T20:01:43.204Z,2025-04-29T16:00:25.719Z,937fbb5eb943aa02,151.227.111.7,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 OPR/89.0.4447.51",MANAGED_CHALLENGE,GB
 2025-04-26T16:01:35.528Z,2025-04-26T13:01:28.205Z,9365a6e6de3fef29,151.228.10.71,/genshin-stella-mod,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Vivaldi/5.3.2679.68",MANAGED_CHALLENGE,GB
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:18.523Z,a4e4dad57960947c,151.228.254.237,/booru/search,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,GB
 2024-12-05T08:02:26.225Z,2024-12-05T05:58:47.875Z,8ed151ddf9182a80,151.229.247.211,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,GB
 2025-07-16T20:03:41.045Z,2025-07-16T18:00:30.700Z,960341fa2c187743,151.230.36.45,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",MANAGED_CHALLENGE,GB
 2025-11-25T15:04:05.427Z,2025-11-25T09:00:44.828Z,9a3fb58dce311b03,151.230.65.63,/genshin-stella-mod,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,GB
@@ -231964,6 +231997,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2025-06-17T22:10:40.133Z,2025-06-15T12:00:30.458Z,9501b62ab8d136c5,159.203.10.97,/site/wp-includes/wlwmanifest.xml,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36",BLOCK,CA
 2024-12-30T18:02:02.962Z,2024-12-30T15:29:51.645Z,8fa28e02aa8eab9a,159.203.11.75,/,Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,CA
 2025-12-22T15:03:47.097Z,2025-12-22T13:00:25.469Z,9b1f6f7eca3c1117,159.203.14.119,/wp-login.php,Mozilla/5.0,BLOCK,CA
+2026-10-22T09:46:50.251Z,2026-10-22T04:00:11.907Z,a4e5163d5efdaaf1,159.203.14.198,/wp-login.php,Mozilla/5.0,BLOCK,CA
 2025-12-24T20:03:51.862Z,2025-12-24T17:00:18.889Z,9b3159259e1aaa55,159.203.23.247,/wp-login.php,Mozilla/5.0,BLOCK,CA
 2026-05-17T06:05:48.984Z,2026-05-17T04:00:30.669Z,9fcf69a1dde1e910,159.203.24.37,/wp-login.php,Mozilla/5.0,BLOCK,CA
 2026-08-07T10:46:13.070Z,2026-08-07T08:00:10.454Z,a27457e83ea339e9,159.203.31.205,/wp-login.php,Mozilla/5.0,BLOCK,CA
@@ -253814,6 +253848,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-02-09T00:19:45.032Z,2026-02-08T21:00:09.803Z,9cad6005dc62d640,173.236.216.59,/,Mozilla/5.0 (Windows NT 10.0; WOW64; rv:45.0) Gecko/20100101 Firefox/45.0,MANAGED_CHALLENGE,US
 2025-09-04T05:03:25.097Z,2025-09-04T02:00:31.900Z,9799dba7d3b0388b,173.236.245.71,/en/auth/login/v292,nginx-ssl early hints,BLOCK,US
 2026-01-24T20:03:28.692Z,2026-01-24T15:00:23.947Z,9c3055325e738e30,173.237.206.68,/blocklist-generator/pihole,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36",MANAGED_CHALLENGE,T1
+2026-10-22T09:46:50.251Z,2026-10-22T04:00:17.627Z,a4e506d66a6836ca,173.238.113.160,/booru/search,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,CA
 2025-06-20T15:03:20.612Z,2025-06-20T13:00:21.700Z,952b342daaf75ac8,173.239.194.152,/genshin-stella-mod,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,AU
 2026-07-06T00:33:57.255Z,2026-07-05T22:00:07.181Z,a1698e767812a029,173.239.196.4,/wp-includes/css/buttons.css,Go-http-client/1.1,BLOCK,SG
 2025-07-16T15:03:33.187Z,2025-07-16T12:00:20.080Z,960120a9d9b7f8e6,173.239.196.14,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36",CHALLENGE,SG
@@ -258841,6 +258876,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2025-06-25T10:03:32.182Z,2025-06-25T08:00:20.880Z,9552d9c2180a7750,178.62.41.222,/genshin-stella-mod,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,GB
 2025-06-30T10:03:49.404Z,2025-06-30T04:00:32.242Z,957a163e1d9997c2,178.62.41.222,/genshin-stella-mod,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,GB
 2026-04-03T00:22:08.102Z,2026-04-02T20:00:10.037Z,9e61d109ab73149b,178.62.46.66,/wp-login.php,Mozilla/5.0,BLOCK,GB
+2026-10-22T09:46:50.251Z,2026-10-22T04:00:12.718Z,a4e5089c5cf924ec,178.62.52.211,/wp-login.php,Mozilla/5.0,BLOCK,GB
 2026-10-21T19:03:58.742Z,2026-10-21T14:00:12.721Z,a4e0311ecf7dbef3,178.62.104.120,/wp-login.php,Mozilla/5.0,BLOCK,GB
 2026-02-06T05:24:38.057Z,2026-02-06T01:00:18.855Z,9c9679687b01f77c,178.62.116.7,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; WOW64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 OPR/89.0.4447.51",MANAGED_CHALLENGE,GB
 2026-01-21T10:05:35.453Z,2026-01-21T05:00:16.007Z,9c13de07adfab96f,178.62.196.188,/wp-login.php,Mozilla/5.0,BLOCK,NL
@@ -272332,6 +272368,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2025-09-14T10:03:33.821Z,2025-09-14T08:00:21.456Z,97ee4d7a5a570d4d,185.220.101.1,/,Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,T1
 2026-02-18T20:11:45.999Z,2026-02-18T17:00:18.498Z,9cfedf9a6903e50b,185.220.101.1,/,"Mozilla/5.0 (Linux; Android 9; PCDM10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",MANAGED_CHALLENGE,T1
 2026-07-29T10:51:58.422Z,2026-07-29T04:00:17.567Z,a228aa0168d00d5a,185.220.101.1,/,"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",BLOCK,T1
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:22.050Z,a4e62e889a206dc5,185.220.101.1,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Chrome/124.0 Safari/537.36",BLOCK,T1
 2024-09-26T04:05:26.740Z,2024-09-26T02:43:40.066Z,8c8cc8f11a5e62cd,185.220.101.2,/genshin-stella-mod,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Vivaldi/5.3.2679.68",BLOCK,T1
 2024-10-03T20:04:49.212Z,2024-10-03T18:26:02.816Z,8ccbf0e47e1862f8,185.220.101.2,/generated/127.0.0.1/forks/oisd.nsfw.txt,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",BLOCK,T1
 2024-11-13T10:04:50.693Z,2024-11-11T09:30:09.044Z,8e0ca144dd8aca50,185.220.101.2,/,"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",MANAGED_CHALLENGE,T1
@@ -272369,6 +272406,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-06-15T21:02:05.276Z,2026-06-15T16:00:20.189Z,a0c21af09eb762de,185.220.101.7,/.git/config,Go-http-client/1.1,BLOCK,T1
 2026-06-30T06:25:47.533Z,2026-06-30T00:00:06.890Z,a1384418af2e62d9,185.220.101.7,/,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",BLOCK,T1
 2026-08-23T20:14:50.557Z,2026-08-23T18:00:19.640Z,a2fb78aaeacdaca4,185.220.101.7,/,"Mozilla/5.0 (Linux; Android 10; SAMSUNG SM-N9700) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/11.2 Chrome/75.0.3770.143 Mobile Safari/537.36",BLOCK,T1
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:22.274Z,a4e62a5a095478bb,185.220.101.7,/,python-requests/2.34.2,BLOCK,T1
 2024-09-24T00:18:09.173Z,2024-09-23T23:16:17.339Z,8c7b15e6084b750c,185.220.101.8,/generated/127.0.0.1/forks/oisd.nsfw.txt,"Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",BLOCK,T1
 2024-09-28T16:04:42.505Z,2024-09-28T14:14:03.381Z,8ca0f1ecdaaa6304,185.220.101.8,/generated/127.0.0.1/forks/oisd.nsfw.txt,"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",BLOCK,T1
 2026-01-16T05:06:23.487Z,2026-01-16T01:00:16.897Z,9be934acad2be51e,185.220.101.8,/genshin-stella-mod,Mozilla/5.0 (Macintosh; Intel Mac OS X 12.5; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,T1
@@ -272794,6 +272832,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2025-06-25T10:03:32.181Z,2025-06-25T08:00:27.668Z,955273341adcc3c3,185.220.101.105,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edge/44.18363.8131",MANAGED_CHALLENGE,T1
 2025-08-22T20:03:29.251Z,2025-08-22T16:00:30.927Z,973341533e48ecbc,185.220.101.105,/,"Mozilla/5.0 (Linux; Android 6.0.1; ZTE B2017G Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36 YaApp_Android/9.75 YaSearchBrowser/9.75",MANAGED_CHALLENGE,T1
 2025-09-22T10:04:11.282Z,2025-09-22T08:01:02.716Z,982f3fa4c825e51e,185.220.101.105,/,"Mozilla/5.0 (Linux; Android 8.0.0; SM-G930F Build/R16NW; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/81.0.4044.138 Mobile Safari/537.36",MANAGED_CHALLENGE,T1
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:21.789Z,a4e5b7873aef742f,185.220.101.105,/,"""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36""",BLOCK,T1
 2024-10-01T18:05:25.525Z,2024-10-01T17:10:43.317Z,8cbb3508cb8eca95,185.220.101.106,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",CHALLENGE,T1
 2024-10-03T20:04:49.211Z,2024-10-03T18:24:48.376Z,8ccc370acb8262eb,185.220.101.106,/generated/127.0.0.1/forks/oisd.nsfw.txt,"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36",BLOCK,T1
 2026-05-31T15:28:03.618Z,2026-05-31T10:00:24.947Z,a0447c16db688a82,185.220.101.106,/genshin-stella-mod,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0,BLOCK,T1
@@ -273890,6 +273929,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-09-29T11:00:40.680Z,2026-09-29T02:00:13.881Z,a426c64048c3ef4c,185.247.137.13,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
 2025-05-29T10:03:42.375Z,2025-05-29T06:00:21.603Z,9472a929f8cdbdbe,185.247.137.14,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,TR
 2025-12-29T20:03:53.415Z,2025-12-29T15:00:19.404Z,9b5a02ad2f48b349,185.247.137.14,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
+2026-10-22T09:46:50.251Z,2026-10-22T04:00:08.289Z,a4e5546d7ad81908,185.247.137.14,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
 2025-09-09T15:04:00.784Z,2025-09-09T12:00:37.112Z,97c616a80bc48bf5,185.247.137.15,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
 2026-02-27T15:13:58.965Z,2026-02-27T13:00:35.709Z,9d474b6e79ad223b,185.247.137.15,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,GB
 2025-04-15T04:01:46.241Z,2025-04-15T03:01:12.247Z,9305494aafc70ab7,185.247.137.16,/,Mozilla/5.0 (compatible; InternetMeasurement/1.0; +https://internet-measurement.com/),BLOCK,TR
@@ -274743,6 +274783,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-08-28T08:33:03.820Z,2026-08-28T02:01:41.352Z,a31f47274a00743c,186.1.186.191,/adminer2.php,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",MANAGED_CHALLENGE,CO
 2026-02-02T05:30:46.319Z,2026-02-01T23:00:10.039Z,9c74f3f7db9d07ba,186.1.186.251,/,Mozilla/5.0 (Macintosh; Intel Mac OS X 12.5; rv:114.0) Gecko/20100101 Firefox/114.0,MANAGED_CHALLENGE,CO
 2026-05-30T06:06:14.928Z,2026-05-30T02:00:19.249Z,a039e8ff3aafba37,186.2.146.195,/contact-me,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36",MANAGED_CHALLENGE,HN
+2026-10-22T09:46:50.250Z,2026-10-22T04:00:18.144Z,a4e4f33f2d345625,186.2.226.16,/booru/search,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,PY
 2026-06-25T15:51:09.941Z,2026-06-25T12:00:26.981Z,a1135f3d0e5b9afb,186.3.76.226,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",BLOCK,EC
 2026-06-05T15:59:36.469Z,2026-06-05T10:00:20.828Z,a06da47c780f4851,186.3.147.95,/,Mozilla/5.0 (Android 13; Mobile; rv:129.0) Gecko/129.0 Firefox/129.0,MANAGED_CHALLENGE,EC
 2026-10-17T17:41:41.142Z,2026-10-17T12:00:11.449Z,a4bf0f2518e456d0,186.3.148.153,/booru/search,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",MANAGED_CHALLENGE,EC
@@ -275122,6 +275163,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-03-01T05:25:14.949Z,2026-03-01T03:00:41.833Z,9d5488acb8ab194e,186.93.126.219,/,"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",MANAGED_CHALLENGE,VE
 2026-05-07T15:46:26.478Z,2026-05-07T12:00:17.559Z,9f7f61b66efea669,186.93.180.228,/genshin-stella-mod/subscription,"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36",MANAGED_CHALLENGE,VE
 2026-02-17T05:28:45.096Z,2026-02-16T23:00:08.789Z,9cf042dd99eddcf4,186.94.153.217,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36",MANAGED_CHALLENGE,VE
+2026-10-22T09:46:50.251Z,2026-10-22T04:00:10.491Z,a4e51c16ab3f49bb,186.95.127.212,/tools/ip-checker,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,VE
 2026-09-13T02:39:22.698Z,2026-09-13T00:01:13.730Z,a3a26d65d8c5f085,186.96.33.76,/users/6a78d5cbe329fcd630f33a36,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",MANAGED_CHALLENGE,MX
 2026-10-12T22:21:05.056Z,2026-10-12T16:00:18.330Z,a496ebec0b3da101,186.96.67.11,/register,"Mozilla/5.0 (Linux; Android 7.1.1; OPPO R9sk) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.90 Mobile Safari/537.36 EdgA/42.0.2.3819",MANAGED_CHALLENGE,VE
 2026-04-30T20:24:19.400Z,2026-04-30T16:00:30.412Z,9f47b0957c48ccdb,186.96.67.15,/tickets,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",MANAGED_CHALLENGE,VE
@@ -276171,6 +276213,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-03-24T20:13:11.695Z,2026-03-24T17:01:10.727Z,9e16dde0cb4e7315,186.249.190.76,/booru,"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Brave Chrome/89.0.4389.114 Safari/537.36",MANAGED_CHALLENGE,BR
 2026-05-28T16:25:59.026Z,2026-05-28T10:00:15.474Z,a02bf8d73e5af25d,186.249.249.163,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",MANAGED_CHALLENGE,BR
 2026-04-20T20:14:43.997Z,2026-04-20T18:00:31.555Z,9ef5b6a87934dd84,186.250.32.232,/booru,"Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.6154.1810 Mobile Safari/537.36",MANAGED_CHALLENGE,BR
+2026-10-22T09:46:50.250Z,2026-10-22T04:00:16.823Z,a4e51b8f0d4a521b,186.250.42.161,/booru/feeds/tag/quill,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,BR
 2026-04-21T20:17:54.175Z,2026-04-21T14:00:21.599Z,9efce85c0c6b521b,186.250.111.127,/,"Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.9228.1736 Mobile Safari/537.36",MANAGED_CHALLENGE,BR
 2026-07-01T20:34:47.621Z,2026-07-01T18:00:28.018Z,a146b4fa7c1c9414,186.250.111.210,/gallery/catgirl-with-long-hair-under-moonlight,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36 Kinza/6.1.5",MANAGED_CHALLENGE,BR
 2026-07-26T00:31:43.931Z,2026-07-25T20:00:07.686Z,a20da5e448707be8,186.250.208.135,/booru/artist/cloneko%EF%BD%B0it,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4950.0 Iron Safari/537.36",MANAGED_CHALLENGE,BR
@@ -285138,6 +285181,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-08-27T20:05:49.974Z,2026-08-27T16:00:35.233Z,a31bbefb2d59d991,192.42.116.12,/lander/riw2fr0t/index.html,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",BLOCK,T1
 2026-09-08T02:35:33.399Z,2026-09-08T00:00:20.686Z,a379350b4806662d,192.42.116.12,/,"Mozilla/5.0 (Linux; Android 6.0; P9000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.99 Mobile Safari/537.36",BLOCK,T1
 2026-10-11T03:26:31.218Z,2026-10-10T22:00:03.184Z,a488aff8a8193441,192.42.116.12,/,"Mozilla/5.0 (Linux; arm_64; Android 7.1.2; Redmi 5 Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.96 YaBrowser/20.4.0.151.00 (alpha) SA/0 Mobile Safari/537.36",BLOCK,T1
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:08.059Z,a4e4dce41e31f5de,192.42.116.12,/,"Mozilla/5.0 (iPhone; CPU iPhone OS 13_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBAV/268.0.0.59.117;FBBV/211574942;FBDV/iPhone10,6;FBMD/iPhone;FBSN/iOS;FBSV/13.4.1;FBSS/3;FBID/phone;FBLC/ru_RU;FBOP/5;FBRV/213224026;FBCR/]",BLOCK,T1
 2026-05-08T00:32:18.578Z,2026-05-07T22:00:08.295Z,9f82e1e58bba0c49,192.42.116.13,/,"Mozilla/5.0 (Linux; Android 9; HRY-LX1 Build/HONORHRY-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.93 Mobile Safari/537.36 YaApp_Android/10.20 YaSearchBrowser/10.20",BLOCK,T1
 2026-05-18T20:31:25.308Z,2026-05-18T16:00:50.008Z,9fdb982abafc3d7f,192.42.116.13,/,"Mozilla/5.0 (Linux; Android 9; SM-J737P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",BLOCK,T1
 2026-05-26T00:37:03.863Z,2026-05-25T20:00:09.984Z,a016ff900c656638,192.42.116.13,/,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36",BLOCK,T1
@@ -285189,6 +285233,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-07-14T20:24:16.661Z,2026-07-14T16:00:14.365Z,a1b1105038c2b92a,192.42.116.19,/,"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36",BLOCK,T1
 2026-08-19T15:24:17.709Z,2026-08-19T12:00:16.401Z,a2d8f1bb196d511b,192.42.116.19,/,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.8 (KHTML, like Gecko) Version/9.0.3 Safari/601.4.4",BLOCK,T1
 2026-09-13T02:39:22.698Z,2026-09-12T20:00:09.243Z,a3a1607c1e548850,192.42.116.19,/lander/pl---monika-olejnik---z--agiel-kursawnia/,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Mobile Safari/537.36",BLOCK,T1
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:24.056Z,a4e45d6c1e72c148,192.42.116.19,/,"Mozilla/5.0 (Linux; Android 5.1; TIT-L01) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",BLOCK,T1
 2026-05-20T00:39:05.211Z,2026-05-19T22:00:09.998Z,9fe5edffcdc63466,192.42.116.20,/,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36",BLOCK,T1
 2026-07-02T15:45:45.136Z,2026-07-02T12:00:13.783Z,a14d47411ccf434e,192.42.116.20,/,"Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/525.13 (KHTML, like Gecko) Chrome/0.2.149.29 Safari/525.13",BLOCK,T1
 2026-08-29T05:12:19.300Z,2026-08-29T00:00:06.547Z,a3271e07de50775d,192.42.116.20,/assets/dist/app.js,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",BLOCK,T1
@@ -285349,6 +285394,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-05-09T20:13:58.593Z,2026-05-09T18:00:12.635Z,9f92867439c74f5f,192.42.116.96,/,"Mozilla/5.0 (Linux; Android 9; SM-J730F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/80.0.3987.162 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/268.1.0.54.121;]",BLOCK,T1
 2026-06-03T00:48:57.964Z,2026-06-02T20:00:11.943Z,a0587f531af5b594,192.42.116.96,/,"Mozilla/5.0 (Linux; Android 10; SH-M09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Mobile Safari/537.36",BLOCK,T1
 2026-10-09T19:57:47.300Z,2026-10-09T16:00:11.933Z,a47e5072fd2ce754,192.42.116.96,/,"Mozilla/5.0 (Linux; arm_64; Android 7.1.2; Redmi 5 Plus) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.96 YaBrowser/20.4.0.151.00 (alpha) SA/0 Mobile Safari/537.36",BLOCK,T1
+2026-10-22T09:46:50.251Z,2026-10-22T06:00:22.486Z,a4e6209169dc660d,192.42.116.96,/h2-console,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36,BLOCK,T1
 2026-04-02T15:21:53.622Z,2026-04-02T10:00:54.781Z,9e5edb8edea74f5f,192.42.116.97,/,Opera/9.80 (Android; Opera Mini/7.6.40125/174.78; U; en) Presto/2.12.423 Version/12.16,BLOCK,T1
 2026-05-12T15:50:17.568Z,2026-05-12T10:00:14.239Z,9fa7ff19d904b8e1,192.42.116.97,/,"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",BLOCK,T1
 2026-03-31T10:21:28.057Z,2026-03-31T08:00:43.200Z,9e4d75b79ce2666e,192.42.116.98,/,"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36",BLOCK,T1
@@ -293741,6 +293787,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-04-26T20:11:44.846Z,2026-04-26T18:00:04.947Z,9f2667415a33b044,194.36.25.6,/blocklist-generator/pihole,,BLOCK,DE
 2026-05-02T00:31:24.065Z,2026-05-01T20:00:09.271Z,9f50bce95d7e9aab,194.36.25.21,/blocklist-generator/pihole,,BLOCK,DE
 2024-11-14T02:26:48.818Z,2024-11-14T00:20:30.492Z,8e22576c9b1d3a70,194.36.25.22,/.git/HEAD,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15",BLOCK,DE
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:12.467Z,a4e4ca0b48871ea1,194.36.27.215,/.git/HEAD,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36",BLOCK,NL
 2025-05-21T08:02:06.407Z,2025-05-20T00:28:08.375Z,9427b5920b51d0dc,194.36.85.72,/cs,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",BLOCK,TR
 2025-11-28T05:03:50.328Z,2025-11-28T03:00:45.911Z,9a560a08f800dbad,194.36.108.84,/wp-login.php,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",MANAGED_CHALLENGE,DE
 2024-09-28T12:06:22.434Z,2024-09-28T10:02:15.675Z,8c9fadb31af8a8df,194.36.178.61,/genshin-stella-mod,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 OPR/89.0.4447.51",CHALLENGE,SG
@@ -296645,6 +296692,7 @@ Added,Date,RayID,IP,Endpoint,User-Agent,Action taken,Country
 2026-08-20T00:53:04.434Z,2026-08-19T22:00:10.643Z,a2dc0cdcb964289d,195.178.110.18,/.git/config,Mozilla/5.0 gitscan-go/0.3,BLOCK,NL
 2026-09-28T03:05:26.791Z,2026-09-27T22:00:04.609Z,a41d4d96ec268895,195.178.110.18,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",BLOCK,NL
 2026-10-04T10:50:46.547Z,2026-10-04T08:00:06.351Z,a4528047ba9619b6,195.178.110.18,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",BLOCK,NL
+2026-10-22T09:46:50.251Z,2026-10-22T02:00:11.667Z,a4e4cbd21a164555,195.178.110.18,/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",BLOCK,NL
 2024-09-15T02:28:09.608Z,2024-09-15T00:28:12.100Z,8c316e0fed3c9f94,195.178.110.21,/.git/config,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36",BLOCK,BG
 2024-09-25T00:18:20.276Z,2024-09-24T23:47:22.680Z,8c8348b87ac6970e,195.178.110.21,/.git/config,"Mozilla/5.0 (Fedora; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",BLOCK,BG
 2024-09-30T06:06:08.023Z,2024-09-30T03:57:46.325Z,8cae00cd2ae566fc,195.178.110.21,/.git/config,"Mozilla/5.0 (Kubuntu; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",BLOCK,BG
